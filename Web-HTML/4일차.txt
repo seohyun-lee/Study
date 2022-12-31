@@ -1,0 +1,77 @@
+[12. 부모 자식과 목록]
+
+<parent>
+  <child></child>
+</parent>
+
+이렇게 하나의 태그 안에 다른 태그가 존재하면 상대적 상위/하위 관계가 발생한다.
+밖을 감싸고 있는 parent 태그를 부모 요소(parent element)라고 하고, 내부에 있는 child 태그를 자식요소(child element)라고 한다. (=자손 요소, 하위 요소)
+
+보통 부모/자식 관계가 정해지는 건 필요에 따라서이다.
+근데 몇몇 태그들은 부모 자식 관계처럼 상하관계가 고정되어 세트처럼 함께 다니며 사용된다. li과 ul, li와 ol.
+
+목차를 만들어보자!
+각 항목 묶기: li태그. <li>....</li>
+목록 구분할 수 있도록 분리: ul, ol 태그. <ul>...</ul>, <ol>...</ol>
+(li태그와 ul/ol태그 꼭 함께 쓰여야)
+
+ul은 unordered list의 약자, li가 글머리기호 되도록 함
+ol은 ordered list의 약자, li가 번호매기기 되도록 함
+
+<ol>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ol>
+
+----
+
+13. 문서의 구조와 슈퍼스타들
+정리정돈위해 웹사이트 구조를 만드는 방법
+
+탭 이름 정하기 html title
+<title>WEB1 - html</title>
+이렇게 해주면 탭 이름이 그전에는 내가 저장한 파일명인 2.html로 보였는데 WEB1 - html로 표시된다
+(title 태그는 검색엔진이 웹페이지 분석 시 가장 중요하게 생각하는 태그이므로 쓰지 않으면 큰 손해)
+
+영어가 아닌 문자로 웹페이지 만들었을 때 문자 깨짐 해결 방법: 코드쓸 때 UTF-8방식으로 저장했으므로 UTF-8방식으로 열라고 알려줘야함
+
+<meta charset="utf-8"> 써주자
+
+이때, 위에서 쓴 두 줄의 코드는 웹사이트의 본문이 아니고 본문을 설명하는 정보이다. 따라서 구조를 분리해줘야함.
+* 본문을 설명하는 태그는 head 태그
+* 본문은 body 태그
+
+<head>
+<title>WEB1 - html</title>
+<meta charset="utf-8">
+</head>
+<body>
+...
+</body>
+
+또, body 태그와 head 태그를 감싸는 하나의 태그
+html 태그를 두기로 약속.
+또, 이 웹페이지가 HTML로 만들어졌다는 것을 표현하기 위해
+문서의 시작에 아래와 같은 코드를 추가. <!doctype html>
+
+<!doctype html>
+<html>
+<head>
+  ...
+</head>
+<body>
+  ...
+</body>
+</html>
+
+---
+[14. 태그의 제왕]
+링크 태그: <a>...</a> (가장 많이 쓰이는 태그. 닿anchor의 a.)
+href: Hypertext Reference, 이를 사용해 링크 주소를 넣어준다.
+<a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">Hypertext Markup Language (HTML)</a>
+
+target="_blank": 링크 클릭 시, 새창에서 페이지가 열리게 하는 속성
+title: 이 링크가 어떤 내용을 담고 있는지를 툴팁으로 보여주는 기능 (커서 가까이 갖다 댔을 때 설명 텍스트 뜨는 것)
+
+여담) 웹서핑은 정보 탐험하며 문제를 해결해나가는 과정. 그 과정 즐겁다면 공부 좋아하고 잘하고 있는 것!
