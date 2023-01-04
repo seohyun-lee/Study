@@ -25,16 +25,22 @@ font라는 태그를 씀
 -----------------
 [4. CSS의 기본 문법]
 HTML 코드 안에서 CSS언어 쓰기
-(1) style 태그 사용
-<style> 선택자{ 효과; }</style> 형태.
-style 태그 사이에 선택자selector(a, h1 등)를 사용하여 요소에 효과declaration를 지정한다.
+
+(1) style 태그
+*형식: <style>
+선택자 {
+  효과;
+}
+</style>
+
+style 태그 사이에 선택자selector를 사용하여 태그에 효과declaration를 지정한다. (a, h1 선택자로 사용시 태그 선택자를 사용한 것)
     ex. <style> a { text-decoration:none; } </style>
-* 하나의 선택자로 여러개의 효과를 지정 가능하다.
+* 하나의 선택자에 여러개의 효과를 지정 가능하다.
 * 효과 지정 끝에는 꼭 세미콜론';'을 쓴다.
 
-(2) style 속성 이용 (a태그 내에 작성)
-style="" 형태.
-HTML안에서 style 속성을 이용해 CSS 문법으로 해석되도록 하여 하나의 요소에 스타일을 적용할 수 있다.
+(2) style 속성
+*형식: 태그 내에 작성, <태그명 style="효과">...</태그명>
+HTML 태그 안에서 style 속성을 이용해 CSS 문법으로 해석되도록 하여 하나의 요소에 스타일을 적용할 수 있다.
 값으로 반드시 CSS의 효과가 들어온다.
     ex. <a href="2.html" style="color:red;text-decoration:underline">CSS</a>
 * style 속성을 직접 사용한 경우는 위치하고 있는 태그에 효과를 주는 것이므로 선택자를 쓰지 않는다.
@@ -68,9 +74,5 @@ h1{
     text-align:center;
 }
 
-----
-[7. CSS 선택자의 기본]
-class 속성 (여기는 다 html)
-class="saw"
 
 
