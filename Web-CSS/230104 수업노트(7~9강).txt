@@ -134,4 +134,3 @@ border: 5px solid red; (순서 안 중요함, 띄어쓰기로 구별)
 Styles: 태그가 어떠한 css스타일에 영향을 받고 있는지 알려줌
 
 https://developer.mozilla.org/ko/docs/Web/HTML/Inline_elements
-
