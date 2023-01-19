@@ -1,0 +1,100 @@
+[10. 그리드 소개]
+목표: 목록과 본문이 나란히 위치하는 레이아웃
+"그리드"
+<body>
+  <div>NAVIGATION</div>
+  <divARTICLE</div>
+</body>
+
+디자인이라는 목적을 위해 어떠한 의미도 없는 태그 필요해짐: div와 span
+<div> </div> : block level element
+<span> </span> : inline element
+
+<head>
+  <style>
+    #grid{
+      border: 5px solid pink;
+      display:grid;
+      grid-template-columns: 150px 1fr;
+    }
+    div{
+      border: 5px solid gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="grid">
+    <div>NAVIGATION</div>
+    <divARTICLE</div>
+  </div>
+</body>
+
+caniuse 사이트
+
+++++
+추가 공부
+display:grid 의미와 Grid Container, Grid Item
+https://studiomeal.com/archives/533
+
+<div class="container"> 		//div.container (부모 요소)
+	<div class="item">A</div>	//div.item (자식 요소)
+	<div class="item">B</div>
+	<div class="item">C</div>
+	....
+</div>
+
+컨테이너에 display: grid을 설정하는 것으로 시작
+.container {
+	display: grid;
+}
+
+그리드 형태 정의
+fr: fraction, 숫자 비율대로 트랙의 크기를 나눈다 (고정 크기와 가변 크기를 섞어 사용할 수도 있다)
+
+.container {
+	grid-template-columns: 200px 200px 500px;
+	/* grid-template-columns: 1fr 1fr 1fr */
+	/* grid-template-columns: repeat(3, 1fr) */
+	/* grid-template-columns: 200px 1fr */
+	/* grid-template-columns: 100px 200px auto */
+
+	grid-template-rows: 200px 200px 500px;
+	/* grid-template-rows: 1fr 1fr 1fr */
+	/* grid-template-rows: repeat(3, 1fr) */
+	/* grid-template-rows: 200px 1fr */
+	/* grid-template-rows: 100px 200px auto */
+}
+
+* repeat함수 사용: repeat(반복횟수, 반복값) 
+repeat(3, 1fr 4fr 2fr); 패턴도 가능
+* minmax 함수 사용
+minmax(100px, auto)는 최소한 100px, 최대는 자동으로 늘어나게 하는 의미
+
+* auto-fill과 auto-fit
+repeat 함수를 쓸 때 column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채운다
+.container {
+	grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+}
+auto-fill: 셀 개수가 5개보다 모자라면 공간이 남음
+auto-fit: 남는 공간을 채움
+
+* gap, row-gap, column-gap
+.container {
+	gap: 10px 20px;
+	/* row-gap: 10px; column-gap: 20px; */
+}
+.container {
+	gap: 20px;
+	/* row-gap: 20px; column-gap: 20px; */
+}
+
+----
+[11. 그리드 써먹기]
+
+h2태그와 p태그 어떻게 같이 묶을까? div로 묶자
+grid container: <div id="grid"> 하고 #grid{}
+grid item: <div id="article">하고 #article{}
+
+#grid ol{} 조상이 grid인 ol태그 선택자
+#grid #article{} 조상이 grid인 아이디 선택자 article
