@@ -1,0 +1,31 @@
+[9. 박스 모델 써먹기]
+h1태그로 쓴 제목 아래에 긴 회색 가로줄을 넣는 방법
+style안에서
+h1{
+border-bottom:1px solid gray;
+}
+여백이 불편함.. 검사 눌러 개발자 도구 선택해 박스모델을 보자
+
+테두리 바깥쪽 주황색은 margin, 테두리 안쪽 초록색은 padding
+margin:0
+padding:20px
+
+목록 태그인 ol 태그는 화면 전체를 쓰는 블록 레벨 element이다
+ol{
+border-right: 1px solid gray;
+width:100px;
+}
+이렇게 폭 조정 가능
+
+만든 두 테두리 선이 붙지 않음. why? ol태그 margin값 있어서. margin 0으로 해주고 적절히 padding 여백 주자.
+ol{
+border-right: 1px solid gray;
+width:100px;
+margin:0;
+padding: 20px;
+}
+
+body도 margin값 있음. 없애주자.
+body{
+margin:0;
+}
