@@ -1,3 +1,21 @@
 [12. 미디어 쿼리]
-반응형 디자인 만드는 법
+반응형 디자인 만들기
 
+    @media(max-width:800px){
+        div{
+            display:none;
+        }
+    }
+
+
+    @media(max-width: 800px){
+        #grid{
+            display: block;
+        }
+        ol{
+            border-right:none;
+        }
+        h1 {
+            border-bottom:none;
+        }
+    }

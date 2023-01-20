@@ -1,0 +1,5 @@
+[14. CSS 코드의 재사용]
+중복을 제거하자
+head 태그 안에서 style 요소 부분을 지우고 (내용은 잘라내기) link 태그를 넣는다.
+<link rel="stylesheet" href="style.css">
+style.css 파일을 생성하여 style 요소 안에 있던 내용을 붙여넣는다
