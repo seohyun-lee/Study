@@ -10,7 +10,7 @@
 
     @media(max-width: 800px){
         #grid{
-            display: block;
+            display:block;
         }
         ol{
             border-right:none;
