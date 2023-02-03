@@ -22,7 +22,7 @@ public class Casting {
 		String f = Integer.toString(1);
 		System.out.println(1+10);
 		System.out.println(f+10);
-		//getclass() 메소드: 객체가 속하는 클래스를 확인할 수 있는 메소드
+		//getclass() 메서드: 객체가 속하는 클래스를 확인할 수 있는 메서드
 		System.out.println(f.getClass());
 	}
 

@@ -9,8 +9,8 @@ public class OkJavaGoInHomeInput {
 
 	public static void main(String[] args) {
 		
-		String id = JOptionPane.showInputDialog("Enter a ID");
-		String bright  = JOptionPane.showInputDialog("Enter a Bright Level");
+		String id = args[0];
+		String bright  = args[1];
 		// Elevator call
 		//org.opentutorials.iot.Elevator 쓰는 것 대신 import
 		Elevator myElevator = new Elevator(id);
@@ -26,7 +26,7 @@ public class OkJavaGoInHomeInput {
 		Lighting floorLamp = new Lighting(id+" / floorLamp");
 		floorLamp.on();
 		
-		DimmingLights moodLamp = new DimmingLights(id+"mood");
+		DimmingLights moodLamp = new DimmingLights(id+" mood");
 		moodLamp.setBright(Double.parseDouble(bright));
 		moodLamp.on();
 		
