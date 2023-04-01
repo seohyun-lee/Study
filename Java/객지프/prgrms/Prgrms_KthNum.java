@@ -1,23 +1,26 @@
 package chap5;
 
 import java.util.Arrays;
+//Arrays 클래스와 Arrays.sort() 메서드, Arrays.copyOfRange() 메서드를 새로 알게 되었다
+
+//Arrays.sort() : toIndex 이전의 index까지 정렬한다
+/* public static void sort(int[] a, int fromIndex, int toIndex) */
+//Arrays.copyOfRange(원본 배열, 시작, 끝/*포함X*/); 위의 경우와 같이 끝은 포함되지X 
 
 public class Prgrms_KthNum {
-	//Arrays.sort() 함수 사용하기 --> toIndex 이전의 index까지 정렬한다
-	/* public static void sort(int[] a, int fromIndex, int toIndex)*/
-
+	
 	public static int[] solution(int[] array, int[][] commands) {
 	    int[] answer = new int[commands.length];
-	    int[] tempArray;
 	    for(int i=0; i<commands.length; i++) {
-	    	tempArray = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
+	    	int[] tempArray = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
 	    	Arrays.sort(tempArray);
 	    	answer[i] = tempArray[commands[i][2]-1];
 	    }
 	    return answer;
 	    
+	   //이클립스에선 정상 작동됐지만 프로그래머스에서는 런타임에러 난 코드
 	   /*
-	    for(int i=0; i<commands.length; i++){
+	   for(int i=0; i<commands.length; i++){
 	        
 	    	int[] tempArray = new int[commands[i][1]-commands[i][0]+1];
 	        for(int j=0; j<commands[i][1]-commands[i][0]+1; j++) {
