@@ -36,8 +36,7 @@ public class Practice3 {
 			price=sc.nextInt();
 			money+=price;
 		}
-		System.out.printf("필요한 총 금액은 %d원 입니다.", money);
-		sc.close();
+		System.out.printf("필요한 총 금액은 %d원 입니다.\n", money);
 	}
 	
 	public static void main(String[] args) {
@@ -50,6 +49,7 @@ public class Practice3 {
 			else if(menu==2) myWishList();
 			else System.out.println("잘못된 접근입니다.");
 		}
+		sc.close();
 	}
 
 }
