@@ -1,11 +1,11 @@
 package chap5;
 
 import java.util.Arrays;
-//Arrays Å¬·¡½º¿Í Arrays.sort() ¸Ş¼­µå, Arrays.copyOfRange() ¸Ş¼­µå¸¦ »õ·Î ¾Ë°Ô µÇ¾ú´Ù
+//Arrays í´ë˜ìŠ¤ì™€ Arrays.sort() ë©”ì„œë“œ, Arrays.copyOfRange() ë©”ì„œë“œë¥¼ ìƒˆë¡œ ì•Œê²Œ ë˜ì—ˆë‹¤
 
-//Arrays.sort() : toIndex ÀÌÀüÀÇ index±îÁö Á¤·ÄÇÑ´Ù
+//Arrays.sort() : toIndex ì´ì „ì˜ indexê¹Œì§€ ì •ë ¬í•œë‹¤
 /* public static void sort(int[] a, int fromIndex, int toIndex) */
-//Arrays.copyOfRange(¿øº» ¹è¿­, ½ÃÀÛ, ³¡/*Æ÷ÇÔX*/); À§ÀÇ °æ¿ì¿Í °°ÀÌ ³¡Àº Æ÷ÇÔµÇÁöX 
+//Arrays.copyOfRange(ì›ë³¸ ë°°ì—´, ì‹œì‘, ë/*í¬í•¨X*/); ìœ„ì˜ ê²½ìš°ì™€ ê°™ì´ ëì€ í¬í•¨ë˜ì§€X 
 
 public class Prgrms_KthNum {
 	
@@ -18,7 +18,7 @@ public class Prgrms_KthNum {
 	    }
 	    return answer;
 	    
-	   //ÀÌÅ¬¸³½º¿¡¼± Á¤»ó ÀÛµ¿µÆÁö¸¸ ÇÁ·Î±×·¡¸Ó½º¿¡¼­´Â ·±Å¸ÀÓ¿¡·¯ ³­ ÄÚµå
+	   //copyOfRange() ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” ì½”ë“œ
 	   /*
 	   for(int i=0; i<commands.length; i++){
 	        

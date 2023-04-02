@@ -5,14 +5,14 @@ public class Task3 {
 
 	public static void showMenu() {
 		System.out.println("=====================================================================================");
-		System.out.println("1. 10°³ ¼ıÀÚ »ı¼º, 2. N°³ ¼ıÀÚ »ı¼º, 3. ¿À¸§Â÷¼ø Á¤·Ä, 4. ³»¸²Â÷¼ø Á¤·Ä, 5. Æò±Õ ±¸ÇÏ±â, 6. Á¤·Ä º¸ÀÌ±â, 0.Á¾·á");
+		System.out.println("1. 10ê°œ ìˆ«ì ìƒì„±, 2. Nê°œ ìˆ«ì ìƒì„±, 3. ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬, 4. ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬, 5. í‰ê·  êµ¬í•˜ê¸°, 6. ì •ë ¬ ë³´ì´ê¸°, 0.ì¢…ë£Œ");
 		System.out.println("=====================================================================================");
-		System.out.print("¹øÈ£ ¼±ÅÃ: ");
+		System.out.print("ë²ˆí˜¸ ì„ íƒ: ");
 	}
 	
 	public static int[] makeArray(int size){
 		int ar[] = new int[size];
-		System.out.println(size+"ÀÇ Å©±â·Î ¹è¿­À» »ı¼ºÇÕ´Ï´Ù.");
+		System.out.println(size+"ì˜ í¬ê¸°ë¡œ ë°°ì—´ì„ ìƒì„±í•©ë‹ˆë‹¤.");
 		for(int i=0; i<ar.length; i++) {
 			ar[i]=0;
 		}
@@ -21,15 +21,15 @@ public class Task3 {
 	
 	public static void setRandom(int[] ar) { 
 		Random rand = new Random(); 
-		System.out.println("·£´ıÇÑ ¼ö¸¦ Ã¤¿ó´Ï´Ù.");
+		System.out.println("ëœë¤í•œ ìˆ˜ë¥¼ ì±„ì›ë‹ˆë‹¤.");
 		for(int i=0; i<ar.length; i++) {
 			ar[i]=rand.nextInt(101);
 		}
 	}
 	
-	public static void showArray(int[] ar) { //¹è¿­ Á¤º¸ ¹Ş¾Æ¿À±â
-		System.out.println("Á¤·ÄÀ» Ãâ·ÂÇÕ´Ï´Ù.");
-		for(int i=0; i<ar.length; i++) { //¹è¿­ ÇÏ³ª¾¿ Ãâ·Â
+	public static void showArray(int[] ar) { //ë°°ì—´ ì •ë³´ ë°›ì•„ì˜¤ê¸°
+		System.out.println("ì •ë ¬ì„ ì¶œë ¥í•©ë‹ˆë‹¤.");
+		for(int i=0; i<ar.length; i++) { //ë°°ì—´ í•˜ë‚˜ì”© ì¶œë ¥
 			System.out.print(ar[i]+" ");
 		}
 		System.out.println();
@@ -49,13 +49,13 @@ public class Task3 {
 	}	
 	
 	public static void getAverage(int[] ar) {
-		System.out.println("Æò±ÕÀ» °è»êÇÕ´Ï´Ù.");
+		System.out.println("í‰ê· ì„ ê³„ì‚°í•©ë‹ˆë‹¤.");
 		double average=0;
 		for(int i=0; i<ar.length; i++) {
 			average+=ar[i];
 		}
 		average/=ar.length;
-		System.out.println("Æò±Õ: " + average);
+		System.out.println("í‰ê· : " + average);
 	}
 	
 	public static void main(String[] args) {
@@ -75,19 +75,19 @@ public class Task3 {
 				showArray(ar);
 			}
 			else if(menu==2) { 
-				System.out.print("»ı¼ºÇÒ 1Â÷¹è¿­ÀÇ Å©±â: ");
+				System.out.print("ìƒì„±í•  1ì°¨ë°°ì—´ì˜ í¬ê¸°: ");
 				size = sc.nextInt();
 				ar=makeArray(size);
 				setRandom(ar);
 				showArray(ar);
 			}
 			else if(menu==3) {
-				System.out.println("¿À¸§Â÷¼øÀ¸·Î ¹è¿­À» Á¤·ÄÇÕ´Ï´Ù.");
+				System.out.println("ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ë°°ì—´ì„ ì •ë ¬í•©ë‹ˆë‹¤.");
 				bubbleSort(ar, 1);
 				showArray(ar);
 			}
 			else if(menu==4) { 
-				System.out.println("³»¸²Â÷¼øÀ¸·Î ¹è¿­À» Á¤·ÄÇÕ´Ï´Ù.");
+				System.out.println("ë‚´ë¦¼ì°¨ìˆœìœ¼ë¡œ ë°°ì—´ì„ ì •ë ¬í•©ë‹ˆë‹¤.");
 				bubbleSort(ar, -1);
 				showArray(ar);
 			}
@@ -98,7 +98,7 @@ public class Task3 {
 				showArray(ar);
 			}
 			else {
-				System.out.println("±×·± ÄÚµå´Â ¾ø½À´Ï´Ù.");
+				System.out.println("ê·¸ëŸ° ì½”ë“œëŠ” ì—†ìŠµë‹ˆë‹¤.");
 			}
 		}
 		sc.close();

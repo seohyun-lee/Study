@@ -1,57 +1,57 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Á¤·ÄÇÏ±â {
+public class ì •ë ¬í•˜ê¸° {
 	
 	public static void showMenu() {
 		System.out.println("=======================================================================");
-		System.out.println("1. 1Â÷¹è¿­¸¸µé±â, 2. ·£´ıÇÑ ¼ö·Î ¼¼ÆÃÇÏ±â, 3. Á¤·ÄÇÏ±â, 4. º¸ÀÌ±â, 5.Æò±Õ ±¸ÇÏ±â, 0.Á¾·áÇÏ±â");
+		System.out.println("1. 1ì°¨ë°°ì—´ë§Œë“¤ê¸°, 2. ëœë¤í•œ ìˆ˜ë¡œ ì„¸íŒ…í•˜ê¸°, 3. ì •ë ¬í•˜ê¸°, 4. ë³´ì´ê¸°, 5.í‰ê·  êµ¬í•˜ê¸°, 0.ì¢…ë£Œí•˜ê¸°");
 		System.out.println("=======================================================================");
 		System.out.println("menu: ");
 	}
 	
-	public static int[] makeArray(int size){ //int[] ÀÚ·áÇüÀ¸·Î ¸Ş¼Òµå ¸¸µé±â
-		int ar[] = new int[size]; //¹è¿­ »ı¼º
-		System.out.println("¹è¿­À» »ı¼ºÇÕ´Ï´Ù.");
-		for(int i=0; i<ar.length; i++) { //¹è¿­ °ªµé 0À¸·Î ÃÊ±âÈ­
+	public static int[] makeArray(int size){ //int[] ìë£Œí˜•ìœ¼ë¡œ ë©”ì†Œë“œ ë§Œë“¤ê¸°
+		int ar[] = new int[size]; //ë°°ì—´ ìƒì„±
+		System.out.println("ë°°ì—´ì„ ìƒì„±í•©ë‹ˆë‹¤.");
+		for(int i=0; i<ar.length; i++) { //ë°°ì—´ ê°’ë“¤ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 			ar[i]=0;
 		}
-		return ar; //¹è¿­ ¸®ÅÏ
+		return ar; //ë°°ì—´ ë¦¬í„´
 	}
 	
-	public static void setRandom(int[] ar) { //int[] ÀÚ·áÇüÀ¸·Î ¸Ş¼Òµå ¸¸µé°í, ¾Õ¿¡¼­ 0ÃÊ±âÈ­·Î ¸¸µé¾î³õ¾Ò´ø ¹è¿­ ¹Ş¾Æ¿À±â
-		Random r = new Random(); //ÀÌ¹ø¿¡ »õ·Î³ª¿Â°Å
-		System.out.println("·£´ıÇÑ ¼ö¸¦ Ã¤¿ó´Ï´Ù.");
+	public static void setRandom(int[] ar) { //int[] ìë£Œí˜•ìœ¼ë¡œ ë©”ì†Œë“œ ë§Œë“¤ê³ , ì•ì—ì„œ 0ì´ˆê¸°í™”ë¡œ ë§Œë“¤ì–´ë†“ì•˜ë˜ ë°°ì—´ ë°›ì•„ì˜¤ê¸°
+		Random r = new Random(); //ì´ë²ˆì— ìƒˆë¡œë‚˜ì˜¨ê±°
+		System.out.println("ëœë¤í•œ ìˆ˜ë¥¼ ì±„ì›ë‹ˆë‹¤.");
 		for(int i=0; i<ar.length; i++) {
 			ar[i]=r.nextInt(ar.length);
 			
-//			ar[i]=r.nextInt()%101; //ÀÌ°Å´Â pdf¿¡ ÀÖ´Â°Å º¹ºÙÇÔ. ÀÎÀÚ ¾È ³ÖÀ¸¸é À½¼öºÎÅÍ ³ª¿È.
-//			if(ar[i] < 0) { //·£´ı µ¹·È´Âµ¥ À½¼öÀÎ°æ¿ì -1 °öÇØÁÜ
+//			ar[i]=r.nextInt()%101; //ì´ê±°ëŠ” pdfì— ìˆëŠ”ê±° ë³µë¶™í•¨. ì¸ì ì•ˆ ë„£ìœ¼ë©´ ìŒìˆ˜ë¶€í„° ë‚˜ì˜´.
+//			if(ar[i] < 0) { //ëœë¤ ëŒë ¸ëŠ”ë° ìŒìˆ˜ì¸ê²½ìš° -1 ê³±í•´ì¤Œ
 //				ar[i]*=-1; 
 //			}		
-//			ar[i]=r.nextInt(100); //0~99ÀÇ ¼ö°¡ ³ª¿È
+//			ar[i]=r.nextInt(100); //0~99ì˜ ìˆ˜ê°€ ë‚˜ì˜´
 		}
 	}
 	
-	public static void showArray(int[] ar) { //¹è¿­ Á¤º¸ ¹Ş¾Æ¿À±â
-		System.out.println("Á¤·ÄÀ» Ãâ·ÂÇÕ´Ï´Ù.");
-		for(int i=0; i<ar.length; i++) { //¹è¿­ ÇÏ³ª¾¿ Ãâ·Â
+	public static void showArray(int[] ar) { //ë°°ì—´ ì •ë³´ ë°›ì•„ì˜¤ê¸°
+		System.out.println("ì •ë ¬ì„ ì¶œë ¥í•©ë‹ˆë‹¤.");
+		for(int i=0; i<ar.length; i++) { //ë°°ì—´ í•˜ë‚˜ì”© ì¶œë ¥
 			System.out.print(ar[i]+" ");
 		}
 		System.out.println();
 	}
 	
 	public static void getAverage(int[] ar) {
-		System.out.println("Æò±ÕÀ» °è»êÇÕ´Ï´Ù.");
+		System.out.println("í‰ê· ì„ ê³„ì‚°í•©ë‹ˆë‹¤.");
 		int average=0;
 		for(int i=0; i<ar.length; i++) {
 			average+=ar[i];
 		}
-		System.out.println("Æò±Õ: " + average);
+		System.out.println("í‰ê· : " + average);
 	}
 	
 	public static void bubbleSort(int[] ar) {
-		System.out.println("¹è¿­À» Á¤·ÄÇÕ´Ï´Ù.");
+		System.out.println("ë°°ì—´ì„ ì •ë ¬í•©ë‹ˆë‹¤.");
 		int temp;
 		for(int scan=0; scan<ar.length; scan++) {
 			for(int i=0; i<ar.length-1; i++) {
@@ -77,10 +77,10 @@ public class Á¤·ÄÇÏ±â {
 			if(menu==0) break;
 			switch(menu) {
 			case 1:
-				System.out.print("»ı¼ºÇÒ 1Â÷¹è¿­ÀÇ Å©±â: ");
+				System.out.print("ìƒì„±í•  1ì°¨ë°°ì—´ì˜ í¬ê¸°: ");
 				size = sc.nextInt();
 				ar=makeArray(size);
-				showArray(ar); //ÀÚ¹Ù´Â ¸ğµç°Ô Æ÷ÀÎÅÍ ³»Àå. ´Ù ·¹ÆÛ·±½º. Àü´ŞÇÏ´Â °Í¸¸À¸·Î ¿øº»Á¢±Ù.
+				showArray(ar); //ìë°”ëŠ” ëª¨ë“ ê²Œ í¬ì¸í„° ë‚´ì¥. ë‹¤ ë ˆí¼ëŸ°ìŠ¤. ì „ë‹¬í•˜ëŠ” ê²ƒë§Œìœ¼ë¡œ ì›ë³¸ì ‘ê·¼.
 				break;
 			case 2: 
 				setRandom(ar);
@@ -97,8 +97,9 @@ public class Á¤·ÄÇÏ±â {
 				getAverage(ar);
 				break;
 			default:
-				System.out.println("±×·± ÄÚµå´Â ¾ø½À´Ï´Ù.");
+				System.out.println("ê·¸ëŸ° ì½”ë“œëŠ” ì—†ìŠµë‹ˆë‹¤.");
 			}
 		}
+		sc.close();
 	}
 }

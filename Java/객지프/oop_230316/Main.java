@@ -9,29 +9,30 @@ public class Main {
 		//input.nextInt()
 		//input.nextLine()
 		
-		String ÇĞ¹ø, ÀÌ¸§;
-		int ³ªÀÌ;
+		String í•™ë²ˆ, ì´ë¦„;
+		int ë‚˜ì´;
 		
-		System.out.println("ÇĞ¹ø ³ªÀÌ ÀÌ¸§ ¼øÀ¸·Î ÇÑ ÁÙ·Î ÀÔ·ÂÇÏ¼¼¿ä: ");
-		ÇĞ¹ø = input.next();
-		³ªÀÌ = input.nextInt();
-		ÀÌ¸§ = input.next();
+		System.out.println("í•™ë²ˆ ë‚˜ì´ ì´ë¦„ ìˆœìœ¼ë¡œ í•œ ì¤„ë¡œ ì…ë ¥í•˜ì„¸ìš”: ");
+		í•™ë²ˆ = input.next();
+		ë‚˜ì´ = input.nextInt();
+		ì´ë¦„ = input.next();
 		
-//		System.out.print("ÇĞ¹ø: ");
-//		ÇĞ¹ø = input.nextLine();
+//		System.out.print("í•™ë²ˆ: ");
+//		í•™ë²ˆ = input.nextLine();
 //		
-//		System.out.print("³ªÀÌ: ");
-//		³ªÀÌ = input.nextInt();
+//		System.out.print("ë‚˜ì´: ");
+//		ë‚˜ì´ = input.nextInt();
 //		
-//		//¿£ÅÍ¸Ô¾î°¡±â ¿ë ÄÚµå ÇÊ¿ä
+//		//ì—”í„°ë¨¹ì–´ê°€ê¸° ìš© ì½”ë“œ í•„ìš”
 //		String temp = input.nextLine();
 //		
-//		System.out.print("ÀÌ¸§: ");
-//		ÀÌ¸§ = input.nextLine();
+//		System.out.print("ì´ë¦„: ");
+//		ì´ë¦„ = input.nextLine();
 		
 		System.out.println("########################");
-		System.out.printf("  %s %s (%d) \n", ÇĞ¹ø, ÀÌ¸§, ³ªÀÌ);
+		System.out.printf("  %s %s (%d) \n", í•™ë²ˆ, ì´ë¦„, ë‚˜ì´);
 		System.out.println("########################");
+		input.close();
 	}
 
 }

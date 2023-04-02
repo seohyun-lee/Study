@@ -1,24 +1,24 @@
 import java.util.Scanner;
 
 public class Shape2 {
-	static Scanner input = new Scanner(System.in); //staticÀ» ºÙ¿©¾ß ÇÑ´Ù
+	static Scanner input = new Scanner(System.in); //staticì„ ë¶™ì—¬ì•¼ í•œë‹¤
 	
 	public static void showMenu(int c) {
 		if(c==0) {
 			System.out.println("======================================================");
-			System.out.println("1. »ï°¢Çü    2. »ç°¢Çü    3. Å©¸®½º¸¶½º Æ®¸®    0.Á¾·áÇÏ±â!");
+			System.out.println("1. ì‚¼ê°í˜•    2. ì‚¬ê°í˜•    3. í¬ë¦¬ìŠ¤ë§ˆìŠ¤ íŠ¸ë¦¬    0.ì¢…ë£Œí•˜ê¸°!");
 			System.out.println("======================================================");
 		}
 		else {
-			System.out.println("»ï°¢ÇüÀ» ±×¸³´Ï´Ù! ¼­ºê ¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä: ");
+			System.out.println("ì‚¼ê°í˜•ì„ ê·¸ë¦½ë‹ˆë‹¤! ì„œë¸Œ ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”: ");
 			System.out.println("======================================================");
-			System.out.println("1. ¿ŞÂÊ Á÷°¢»ï°¢Çü    2. ¿À¸¥ÂÊ Á÷°¢»ï°¢Çü    3. Á¤»ï°¢Çü    0.Á¾·áÇÏ±â!");
+			System.out.println("1. ì™¼ìª½ ì§ê°ì‚¼ê°í˜•    2. ì˜¤ë¥¸ìª½ ì§ê°ì‚¼ê°í˜•    3. ì •ì‚¼ê°í˜•    0.ì¢…ë£Œí•˜ê¸°!");
 			System.out.println("======================================================");
 		}
 	}
 	public static void drawLeftTriangle() {
 		int h;
-		System.out.print("³ôÀÌ: ");
+		System.out.print("ë†’ì´: ");
 		h=input.nextInt();
 		for(int i=0; i<h; i++) {
 			for(int j=0; j<=i; j++) {
@@ -30,7 +30,7 @@ public class Shape2 {
 	
 	public static void drawRightTriangle() {
 		int h;
-		System.out.print("³ôÀÌ: ");
+		System.out.print("ë†’ì´: ");
 		h=input.nextInt();
 		for(int i=0; i<h; i++) {
 			for(int j=h-1; j>i; j--) {
@@ -45,15 +45,15 @@ public class Shape2 {
 	
 	public static void drawEquilateralTriangle() {
 		int h;
-		System.out.print("³ôÀÌ: ");
+		System.out.print("ë†’ì´: ");
 		h=input.nextInt();
 		for(int i=0; i<h; i++) {
 			for(int j=h-1; j>i; j--) {
 				System.out.print("  ");
 			}
 			for(int j=0; j<=i; j++) {
-				if(i%2==0) System.out.print("¡Ú ");
-				else System.out.print("¡Ù ");
+				if(i%2==0) System.out.print("â˜… ");
+				else System.out.print("â˜† ");
 			}
 			System.out.println();
 		}
@@ -61,10 +61,10 @@ public class Shape2 {
 	
 	public static void drawSquare() {
 		int w, h;
-		System.out.println("»ç°¢ÇüÀ» ±×¸³´Ï´Ù!");
-		System.out.print("°¡·Î: ");
+		System.out.println("ì‚¬ê°í˜•ì„ ê·¸ë¦½ë‹ˆë‹¤!");
+		System.out.print("ê°€ë¡œ: ");
 		w=input.nextInt();
-		System.out.print("¼¼·Î: ");
+		System.out.print("ì„¸ë¡œ: ");
 		h=input.nextInt();
 		
 		for(int i=0; i<h; i++) {
@@ -76,7 +76,7 @@ public class Shape2 {
 	
 	public static void drawChristmasTree() {
 		int h;
-		System.out.print("Æ®¸®¸¦ ±×¸³´Ï´Ù! ¿øÇÏ´Â ³ôÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("íŠ¸ë¦¬ë¥¼ ê·¸ë¦½ë‹ˆë‹¤! ì›í•˜ëŠ” ë†’ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 		h=input.nextInt();
 		
 		for(int i=0;i<h;i++) {
@@ -85,9 +85,9 @@ public class Shape2 {
 			}
 			for(int k=0; k<=i; k++) {
 				if(i%5==4)
-					System.out.print("¡Ù ");
+					System.out.print("â˜† ");
 				else
-					System.out.print("¡Ú ");
+					System.out.print("â˜… ");
 			}
 			System.out.println();
 		}
@@ -97,7 +97,7 @@ public class Shape2 {
 				System.out.print(" ");
 			}
 			for(int k=0; k<(h/3); k++) {
-				System.out.print("¡á ");
+				System.out.print("â–  ");
 			}
 			System.out.println();
 		}
@@ -107,14 +107,14 @@ public class Shape2 {
 		int menu=0;
 		while(true) {
 			showMenu(0);
-			System.out.print("¸Ş´º: ");
+			System.out.print("ë©”ë‰´: ");
 			menu=input.nextInt();
 			
 			if(menu==0)
 				break;
 			else if(menu==1) {
 				showMenu(1);
-				System.out.print("¸Ş´º: ");
+				System.out.print("ë©”ë‰´: ");
 				menu=input.nextInt();
 				
 				if(menu==0)

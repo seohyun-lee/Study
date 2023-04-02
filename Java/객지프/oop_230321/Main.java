@@ -5,44 +5,44 @@ public class Main {
     public static void main(String[] args) {
         
         Scanner input=new Scanner(System.in);
-        String ÀÌ¸§, ÇĞ°ú, ³ë·¡, ÀÌÀ¯;
-        int ÇĞ¹ø;
-        float Å°;
+        String ì´ë¦„, í•™ê³¼, ë…¸ë˜, ì´ìœ ;
+        int í•™ë²ˆ;
+        float í‚¤;
         boolean b = true;
  
         while(true) {
-            System.out.print("ÀÌ¸§ : ");
-            ÀÌ¸§ = input.nextLine();
-            System.out.print("ÇĞ°ú : ");
-            ÇĞ°ú = input.nextLine();
-            System.out.print("ÇĞ¹ø : ");
-            ÇĞ¹ø = input.nextInt();
+            System.out.print("ì´ë¦„ : ");
+            ì´ë¦„ = input.nextLine();
+            System.out.print("í•™ê³¼ : ");
+            í•™ê³¼ = input.nextLine();
+            System.out.print("í•™ë²ˆ : ");
+            í•™ë²ˆ = input.nextInt();
             
-            System.out.print("Å°: ");
-            String temp = input.nextLine();
-            Å° = input.nextFloat();
+            System.out.print("í‚¤: ");
+            input.nextLine();
+            í‚¤ = input.nextFloat();
  
-            System.out.print("ÁÁ¾ÆÇÏ´Â ³ë·¡: ");  
-            input.nextLine(); //º¯¼ö »ç¿ë ¾øÀÌµµ ¿£ÅÍ ¸Ô¾î°¡±â °¡´É
-            ³ë·¡  = input.nextLine();
-            System.out.print("±× ³ë·¡¸¦ ÁÁ¾ÆÇÏ´Â ÀÌÀ¯´Â ¹«¾ùÀÎ°¡¿ä? ");
-            ÀÌÀ¯  = input.nextLine();
+            System.out.print("ì¢‹ì•„í•˜ëŠ” ë…¸ë˜: ");  
+            input.nextLine(); //ë³€ìˆ˜ ì‚¬ìš© ì—†ì´ë„ ì—”í„° ë¨¹ì–´ê°€ê¸° ê°€ëŠ¥
+            ë…¸ë˜  = input.nextLine();
+            System.out.print("ê·¸ ë…¸ë˜ë¥¼ ì¢‹ì•„í•˜ëŠ” ì´ìœ ëŠ” ë¬´ì—‡ì¸ê°€ìš”? ");
+            ì´ìœ   = input.nextLine();
  
-            System.out.print("ÀÔ·ÂÇÑ Á¤º¸°¡ ¸ÂÀ¸¸é true, Æ²¸®¸é false¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+            System.out.print("ì…ë ¥í•œ ì •ë³´ê°€ ë§ìœ¼ë©´ true, í‹€ë¦¬ë©´ falseë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
             b = input.nextBoolean();          
-            System.out.println("°á°ú : " + b + "\n");        
+            System.out.println("ê²°ê³¼ : " + b + "\n");        
             input.nextLine(); 
             if(b == true) break;
-            System.out.println("´Ù½Ã ÀÔ·Â¹Ù¶ø´Ï´Ù");
+            System.out.println("ë‹¤ì‹œ ì…ë ¥ë°”ëë‹ˆë‹¤");
         }
         
         System.out.println("#############################################");        
-        System.out.println("¾È³çÇÏ¼¼¿ä! Àú´Â " + ÇĞ°ú + " " + ÇĞ¹ø +"ÇĞ¹ø, " + ÀÌ¸§ +"ÀÔ´Ï´Ù.");
-        System.out.println("Å°´Â " + Å° + "cmÀÔ´Ï´Ù.");
-        System.out.println("Á¦°¡ ÁÁ¾ÆÇÏ´Â ³ë·¡´Â " + ³ë·¡ +"ÀÔ´Ï´Ù.");
-        System.out.println("ÀÌ ³ë·¡¸¦ ÁÁ¾ÆÇÏ´Â ÀÌÀ¯´Â " + ÀÌÀ¯);        
+        System.out.println("ì•ˆë…•í•˜ì„¸ìš”! ì €ëŠ” " + í•™ê³¼ + " " + í•™ë²ˆ +"í•™ë²ˆ, " + ì´ë¦„ +"ì…ë‹ˆë‹¤.");
+        System.out.println("í‚¤ëŠ” " + í‚¤ + "cmì…ë‹ˆë‹¤.");
+        System.out.println("ì œê°€ ì¢‹ì•„í•˜ëŠ” ë…¸ë˜ëŠ” " + ë…¸ë˜ +"ì…ë‹ˆë‹¤.");
+        System.out.println("ì´ ë…¸ë˜ë¥¼ ì¢‹ì•„í•˜ëŠ” ì´ìœ ëŠ” " + ì´ìœ );        
         System.out.println("#############################################");
-        System.out.println("ÀÔ·ÂÇÑ Á¤º¸´Â ¸ğµÎ " + b +"ÀÔ´Ï´Ù!");        
+        System.out.println("ì…ë ¥í•œ ì •ë³´ëŠ” ëª¨ë‘ " + b +"ì…ë‹ˆë‹¤!");        
         input.close();
         
     }

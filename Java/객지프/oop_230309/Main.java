@@ -2,9 +2,9 @@
 public class Main {
 	public static void main(String[] args) {
 		Car m = new Car();
-		m.¿òÁ÷ÀÌ±â();
-		m.ÁÖÀ¯ÇÏ±â();
-		m.¿òÁ÷ÀÌ±â();
+		m.ì›€ì§ì´ê¸°();
+		m.ì£¼ìœ í•˜ê¸°();
+		m.ì›€ì§ì´ê¸°();
 	}
 	
 }

@@ -1,25 +1,25 @@
 
 public class Car {
 
-	private int ¿¬·á·®;
-	private int ÁÖÇà°Å¸®;
+	private int ì—°ë£ŒëŸ‰;
+	private int ì£¼í–‰ê±°ë¦¬;
 	
-	public void ¿òÁ÷ÀÌ±â() {
+	public void ì›€ì§ì´ê¸°() {
 		int i;
-		if(this.¿¬·á·® ==0) {
-			System.out.println("¿¬·á·®ÀÌ 0ÀÔ´Ï´Ù");
+		if(this.ì—°ë£ŒëŸ‰ ==0) {
+			System.out.println("ì—°ë£ŒëŸ‰ì´ 0ì…ë‹ˆë‹¤");
 			return;
 		}
 		
-		for(i=0;i<¿¬·á·®;i++) {
-			System.out.println("ÀÚµ¿Â÷°¡ ´Ş¸³´Ï´Ù");
-			¿¬·á·®--;
-			ÁÖÇà°Å¸®++;
+		for(i=0;i<ì—°ë£ŒëŸ‰;i++) {
+			System.out.println("ìë™ì°¨ê°€ ë‹¬ë¦½ë‹ˆë‹¤");
+			ì—°ë£ŒëŸ‰--;
+			ì£¼í–‰ê±°ë¦¬++;
 		}
 	}
-	public void ÁÖÀ¯ÇÏ±â() {
-		this.¿¬·á·® +=10;
-		System.out.println("ÁÖÀ¯¿Ï·á");
+	public void ì£¼ìœ í•˜ê¸°() {
+		this.ì—°ë£ŒëŸ‰ +=10;
+		System.out.println("ì£¼ìœ ì™„ë£Œ");
 	}
 
 }

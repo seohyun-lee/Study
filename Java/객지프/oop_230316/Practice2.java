@@ -9,16 +9,16 @@ public class Practice2 {
 		String name, univ, major, studentNum;
 		int age;
 		
-		System.out.print("ÀÌ¸§: ");
+		System.out.print("ì´ë¦„: ");
 		name = input.nextLine();
-		System.out.print("´ëÇĞ±³: ");
+		System.out.print("ëŒ€í•™êµ: ");
 		univ = input.nextLine();
-		System.out.print("Àü°ø: ");
+		System.out.print("ì „ê³µ: ");
 		major = input.nextLine();
 		
-		System.out.print("ÇĞ¹ø: ");
+		System.out.print("í•™ë²ˆ: ");
 		studentNum = input.nextLine();
-		System.out.print("³ªÀÌ: ");
+		System.out.print("ë‚˜ì´: ");
 		age = input.nextInt();
 
 		System.out.println("#############################");

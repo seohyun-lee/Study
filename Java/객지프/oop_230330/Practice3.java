@@ -6,15 +6,15 @@ public class Practice3 {
 
 	public static void showMenu() {
 		System.out.println("====================================");
-		System.out.println("1. ³»¸¾´ë·Î ±¸±¸´Ü    2. ³ªÀÇ À§½Ã¸®½ºÆ®    0. Á¾·á");
+		System.out.println("1. ë‚´ë§˜ëŒ€ë¡œ êµ¬êµ¬ë‹¨    2. ë‚˜ì˜ ìœ„ì‹œë¦¬ìŠ¤íŠ¸    0. ì¢…ë£Œ");
 		System.out.println("====================================");
-		System.out.print("¼±ÅÃ: ");
+		System.out.print("ì„ íƒ: ");
 	}
 	
 	public static void myGugudan() {
-		System.out.print("¸î´Ü±îÁö °è»êÇÏ¿© Ãâ·ÂÇÒ±î¿ä? ");
+		System.out.print("ëª‡ë‹¨ê¹Œì§€ ê³„ì‚°í•˜ì—¬ ì¶œë ¥í• ê¹Œìš”? ");
 		int n = sc.nextInt();
-		System.out.println("Â¦¼ö Ãâ·Â: 0, È¦¼ö Ãâ·Â: 1À» ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì§ìˆ˜ ì¶œë ¥: 0, í™€ìˆ˜ ì¶œë ¥: 1ì„ ì…ë ¥í•˜ì„¸ìš”");
 		int checker=sc.nextInt();
 		for (int i=1;i<=n;i++){
 			for (int j=1;j<=9;j++){
@@ -25,18 +25,18 @@ public class Practice3 {
 		
 	}
 	public static void myWishList() {
-		System.out.print("³»°¡ °¡Áö°í ½ÍÀº ¹°°ÇÀº ¸î°³? ");
+		System.out.print("ë‚´ê°€ ê°€ì§€ê³  ì‹¶ì€ ë¬¼ê±´ì€ ëª‡ê°œ? ");
 		int n = sc.nextInt();
 		
 		int price, money=0;
 		for(int i=0; i<n; i++) {
 			System.out.printf("(%d): ", i+1);
 			sc.nextLine();
-			System.out.print("    °¡°İ: ");
+			System.out.print("    ê°€ê²©: ");
 			price=sc.nextInt();
 			money+=price;
 		}
-		System.out.printf("ÇÊ¿äÇÑ ÃÑ ±İ¾×Àº %d¿ø ÀÔ´Ï´Ù.\n", money);
+		System.out.printf("í•„ìš”í•œ ì´ ê¸ˆì•¡ì€ %dì› ì…ë‹ˆë‹¤.\n", money);
 	}
 	
 	public static void main(String[] args) {
@@ -47,7 +47,7 @@ public class Practice3 {
 			if(menu==0) break;
 			else if(menu==1) myGugudan();
 			else if(menu==2) myWishList();
-			else System.out.println("Àß¸øµÈ Á¢±ÙÀÔ´Ï´Ù.");
+			else System.out.println("ì˜ëª»ëœ ì ‘ê·¼ì…ë‹ˆë‹¤.");
 		}
 		sc.close();
 	}

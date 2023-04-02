@@ -8,21 +8,21 @@ public class Main {
 		r=5;
 		
 		result = r*r*PI;
-		System.out.println(r + " * " + r + " * " + PI + " = " + result + " ÀÔ´Ï´Ù.");
-		System.out.printf("%d * %d * %.2f = %.1f ÀÔ´Ï´Ù.", r, r, PI, result);
+		System.out.println(r + " * " + r + " * " + PI + " = " + result + " ì…ë‹ˆë‹¤.");
+		System.out.printf("%d * %d * %.2f = %.1f ì…ë‹ˆë‹¤.", r, r, PI, result);
 	}
 }
 */
 
 public class Main {
 	public static void main(String[] args) {
-		String ÇĞ°ú = "ÄÄÇ»ÅÍ°øÇĞ°ú";
-		String name = "ÀÌ¼­Çö";
-		String ÇĞ¹ø = "2276219";
+		String í•™ê³¼ = "ì»´í“¨í„°ê³µí•™ê³¼";
+		String name = "ì´ì„œí˜„";
+		String í•™ë²ˆ = "2276219";
 		
 		System.out.print("===================================\n");
-		System.out.println("¾È³çÇÏ¼¼¿ä, ¹İ°©½À´Ï´Ù!");
-		System.out.printf("Àú´Â %s ÇĞ¹ø %s %sÀÔ´Ï´Ù.\n", ÇĞ°ú, ÇĞ¹ø, name);
+		System.out.println("ì•ˆë…•í•˜ì„¸ìš”, ë°˜ê°‘ìŠµë‹ˆë‹¤!");
+		System.out.printf("ì €ëŠ” %s í•™ë²ˆ %s %sì…ë‹ˆë‹¤.\n", í•™ê³¼, í•™ë²ˆ, name);
 		System.out.print("===================================\n");
 	}
 }

@@ -1,49 +1,49 @@
-//È£ÅÚ, ºôµù, Áö·ÚÃ£±â
+//í˜¸í…”, ë¹Œë”©, ì§€ë¢°ì°¾ê¸°
 import java.util.Scanner;
 
-public class ¹è¿­ {
+public class ë°°ì—´ {
 
-	public static void ºôµùº¸ÀÌ±â (int [][] ar) {
+	public static void ë¹Œë”©ë³´ì´ê¸° (int [][] ar) {
 		for(int i=0; i<ar.length; i++) {
 			System.out.printf("[%2d] : ", i+1);
 			for(int k=0; k<ar[i].length; k++) {
-				System.out.print("¡à ");
+				System.out.print("â–¡ ");
 			}
 			System.out.println();
 		}
 	}
 	public static void main(String[] args) {
-		int [][] bld = new int [3][10]; //3·© 10¿­
-		int [][] bld1 = new int [3][]; //3Çà n¿­
-		int [][] bld2; //nÃş n¿­
-		//1Â÷¿ø ¹è¿­Àº int ar[] = new int [10];
+		int [][] bld = new int [3][10]; //3ë­ 10ì—´
+		int [][] bld1 = new int [3][]; //3í–‰ nì—´
+		int [][] bld2; //nì¸µ nì—´
+		//1ì°¨ì› ë°°ì—´ì€ int ar[] = new int [10];
 		//int [][][]m = new int [10][5][3];
 		//int [][][]m = new int [10][5][3].
 		
 		
 		Scanner input = new Scanner(System.in);
 		
-		ºôµùº¸ÀÌ±â(bld); // 3Çà 10¿­
+		ë¹Œë”©ë³´ì´ê¸°(bld); // 3í–‰ 10ì—´
 		System.out.println("====================================");
 		
 		int size;
 		for(int i=0; i<bld1.length; i++) {
-			System.out.printf("[%2d] Ãş ¹æ°³¼ö: ", i+1);
+			System.out.printf("[%2d] ì¸µ ë°©ê°œìˆ˜: ", i+1);
 			size = input.nextInt();
 			bld1[i] = new int[size];
 		}
-		ºôµùº¸ÀÌ±â(bld1); //3ÇàÀÎµ¥ ¿­Àº ¿øÇÏ´Â´ë·Î ³ª¿È
+		ë¹Œë”©ë³´ì´ê¸°(bld1); //3í–‰ì¸ë° ì—´ì€ ì›í•˜ëŠ”ëŒ€ë¡œ ë‚˜ì˜´
 		System.out.println("====================================");
 		
-		System.out.print("¿øÇÏ´Â Ãş:");
+		System.out.print("ì›í•˜ëŠ” ì¸µ:");
 		size = input.nextInt();
 		bld2 = new int [size][];
 		for(int i=0; i<bld2.length; i++) {
-			System.out.printf("[%2d] Ãş ¹æ°³¼ö: ", i+1);
+			System.out.printf("[%2d] ì¸µ ë°©ê°œìˆ˜: ", i+1);
 			size = input.nextInt();
 			bld2[i] = new int[size];
 		}
-		ºôµùº¸ÀÌ±â(bld2); //3ÇàÀÎµ¥ ¿­Àº ¿øÇÏ´Â´ë·Î ³ª¿È
+		ë¹Œë”©ë³´ì´ê¸°(bld2); //3í–‰ì¸ë° ì—´ì€ ì›í•˜ëŠ”ëŒ€ë¡œ ë‚˜ì˜´
 		System.out.println("====================================");
 		input.close();
 		
