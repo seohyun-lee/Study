@@ -13,7 +13,7 @@ public class C_1568 {
 		}
 		int start = sc.nextInt();
 		int end = sc.nextInt();
-		int max=0;
+		int max=-2147483648;
 		int index=0;
 		for(int i=start-1;i<end;i++) {
 			if(arr[i]>max) {
