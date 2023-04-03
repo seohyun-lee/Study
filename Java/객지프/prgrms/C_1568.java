@@ -1,6 +1,5 @@
 package chap8;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class C_1568 {
 
@@ -23,6 +22,7 @@ public class C_1568 {
 			}
 		}
 		System.out.println(index+1);
+		sc.close();
 	}
 
 }
