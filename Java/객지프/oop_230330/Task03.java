@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Task3 {
+public class Task03 {
 
 	public static void showMenu() {
 		System.out.println("=====================================================================================");
