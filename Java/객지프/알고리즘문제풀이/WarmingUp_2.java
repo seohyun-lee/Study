@@ -1,4 +1,3 @@
-package prgrms;
 
 import java.util.Scanner;
 

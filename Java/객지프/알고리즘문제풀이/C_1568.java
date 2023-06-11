@@ -1,4 +1,4 @@
-package chap8;
+
 import java.util.Scanner;
 
 public class C_1568 {

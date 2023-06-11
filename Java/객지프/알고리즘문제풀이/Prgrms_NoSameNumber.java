@@ -1,4 +1,4 @@
-package chap4;
+
 import java.util.Scanner;
 
 public class Prgrms_NoSameNumber {

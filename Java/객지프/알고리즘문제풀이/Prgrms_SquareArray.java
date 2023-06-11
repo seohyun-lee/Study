@@ -1,4 +1,3 @@
-package chap7;
 
 public class Prgrms_SquareArray {
 	

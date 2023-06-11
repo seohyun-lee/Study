@@ -1,4 +1,3 @@
-package chap5;
 
 import java.util.Arrays;
 //Arrays 클래스와 Arrays.sort() 메서드, Arrays.copyOfRange() 메서드를 새로 알게 되었다
