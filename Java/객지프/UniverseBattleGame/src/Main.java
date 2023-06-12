@@ -1,5 +1,4 @@
 
-import player.Player;
 import view.StartView;
 
 public class Main {

@@ -1,7 +1,9 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -10,16 +12,16 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;//글씨쓰기
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
-public class StartView extends JFrame {
+public class GameClearView extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel titleLabel;
     private Image backgroundImage; //배경이미지
+    private String text;
 
 	/**
 	 * Launch the application.
@@ -40,7 +42,7 @@ public class StartView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public StartView() {
+	public GameClearView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 780, 600);		
 		contentPane = new JPanel() {
@@ -51,6 +53,7 @@ public class StartView extends JFrame {
                 if (backgroundImage != null) {
                     g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
                 }
+
             }
         };		
 		// 배경 이미지 설정
@@ -61,25 +64,26 @@ public class StartView extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		setLocationRelativeTo(null);
-
-		//글자 이미지 띄움
-        titleLabel = new JLabel();
-        titleLabel.setBounds(200, 110, 390, 260);
-        titleLabel.setIcon(new ImageIcon("./src/file/title.png"));
-        contentPane.add(titleLabel);
         
-		//시작버튼, MusicianSelectView()를 visible시킨다
-        JButton startbtn = new JButton("START");
-        startbtn.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
-        startbtn.setBounds(300, 420, 160, 50);
-        contentPane.add(startbtn);
-        startbtn.addActionListener(new ActionListener() {
+        JLabel loseText = new JLabel("GAME CLEAR!!!!!");
+        loseText.setForeground(new Color(255, 255, 255));
+        loseText.setFont(new Font("Baskerville Old Face", Font.BOLD | Font.ITALIC, 70));
+        loseText.setBounds(84, 172, 609, 105);
+        contentPane.add(loseText);
+		
+        JButton returnbtn = new JButton("RESET");
+        returnbtn.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
+        returnbtn.setBounds(300, 420, 160, 50);
+        contentPane.add(returnbtn);
+        returnbtn.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-    			new MusicianSelectView().setVisible(true);
+    			new StartView().setVisible(true);
     			setVisible(false);
         	}
         });
+        
+        //몬스터 번호 초기화
+        MusicianSelectView.monCnt=1;
 		
 	}
-
 }

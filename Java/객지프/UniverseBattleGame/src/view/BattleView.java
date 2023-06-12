@@ -17,7 +17,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
-import player.Player;
+import player.*;
+import java.awt.Font;
 
 public class BattleView extends JFrame {
 
@@ -31,7 +32,7 @@ public class BattleView extends JFrame {
 	private JLabel sparkLabel;
 	
 	private JButton btnATK; //attack
-	private JButton btnDFS; //defense
+	private JButton btnDEF; //defense
 	private JButton btnRST; //rest
 	private JButton btnSPC; //special
 	
@@ -41,9 +42,9 @@ public class BattleView extends JFrame {
 	private JScrollPane scrollPane;
 	private JTextArea textArea;
 
-	// 메인에서 전달받은 플레이어를 전달할 변수
-	Player p1 = new Player("Choi", 1000, 100, "guitarist.png");
-	Player p2 = new Player("Alien", 1000, 100, "monster_1.png");
+	// 이 view에서의 테스팅을 위해 singer, monster1로 생성했음
+	Musician p1 = new Musician("singer");
+	Monster p2 = new Monster("monster1");
 
 	/**
 	 * Launch the application.
@@ -140,18 +141,22 @@ public class BattleView extends JFrame {
 		
 		//버튼들
 		btnATK = new JButton("Attack");
+		btnATK.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
 		btnATK.setBounds(30, 410, 110, 50);
 		contentPane.add(btnATK);
 		
-		btnDFS = new JButton("Defense");
-		btnDFS.setBounds(150, 410, 110, 50);
-		contentPane.add(btnDFS);
+		btnDEF = new JButton("Defense");
+		btnDEF.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
+		btnDEF.setBounds(150, 410, 110, 50);
+		contentPane.add(btnDEF);
 		
 		btnRST = new JButton("Rest");
+		btnRST.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
 		btnRST.setBounds(30, 490, 110, 50);
 		contentPane.add(btnRST);
 		
 		btnSPC = new JButton("Special");
+		btnSPC.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
 		btnSPC.setBounds(150, 490, 110, 50);
 		contentPane.add(btnSPC);
 		
@@ -159,22 +164,30 @@ public class BattleView extends JFrame {
         btnATK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 p1.attack(p2);
-                bar2.setValue(p2.getHp());
-                textArea.append(p1.name + "이 " + p2.name + "을 공격합니다\n");
+                bar2.setValue(p2.getHP());
+                textArea.append(p1.name+"이 "+p2.name+"을 공격합니다.\n");
                 
-                // 공격후 Monster의 체력이 0인 경우 처리
-                if (p2.getHp() == 0) {
-                    new EndingView("win").setVisible(true);
+                // 공격후 Monster의 체력이 0인 경우 처리: 마지막 몬스터가 아니라면 NextGameView, 마지막 몬스터라면 GameClearView
+                if (p2.getHP() == 0) {
+                	if(MusicianSelectView.monCnt < 4) {
+                        new NextGameView().setVisible(true);
+                	}
+                	else {
+                		new GameClearView().setVisible(true);
+                	}
                     setVisible(false);
+                }
+                if(p1.ATKCount==3) {
+                    btnSPC.setEnabled(true);
                 }
             }
         });
 
         // 방어 버튼 리스너
-        btnDFS.addActionListener(new ActionListener() {
+        btnDEF.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	p1.defense();
-                textArea.append(p1.name + "이 공격을 방어할 준비를 합니다.\n");
+                textArea.append(p1.name+"이 공격을 방어할 준비를 합니다.\n");
                 
             }
         });
@@ -183,8 +196,8 @@ public class BattleView extends JFrame {
         btnRST.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	p1.rest();
-                bar1.setValue(p1.getHp());
-                textArea.append(p1.name + "이 휴식을 취해 체력을 회복합니다.\n");
+                bar1.setValue(p1.getHP());
+                textArea.append(p1.name+"이 휴식을 취해 체력을 회복합니다.\n");
                 
             }
         });
@@ -193,20 +206,28 @@ public class BattleView extends JFrame {
         btnSPC.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	p1.special(p2);
-                bar2.setValue(p2.getHp());
-                textArea.append(p1.name + "이 특수 스킬을 사용합니다.\n");
-                textArea.append(p1.name + "이 " + p2.name + "에게 아주 강한 공격을 사용했습니다!\n");
+                bar2.setValue(p2.getHP());
+                textArea.append(p1.name+"이 "+p2.name+"에게 아주 강한 공격을 사용했습니다!\n");
+                textArea.append(p2.name+"에게 상당한 피해를 입혔습니다.\n");
                 
-                // 공격후 Monster의 체력이 0인 경우 처리
-                if (p2.getHp() == 0) {
-                    new EndingView("win").setVisible(true);
+                // 공격후 Monster의 체력이 0인 경우 처리: 마지막 몬스터가 아니라면 NextGameView, 마지막 몬스터라면 GameClearView
+                if (p2.getHP() == 0) {
+                	if(MusicianSelectView.monCnt < 4) {
+                        new NextGameView().setVisible(true);
+                	}
+                	else {
+                		new GameClearView().setVisible(true);
+                	}
                     setVisible(false);
                 }
+                btnSPC.setEnabled(false);
             }
         });
         
-        //임시로 만든 Monster 공격 버튼
+        // Monster의 공격 버튼
 		JButton btnMSTATK = new JButton("Monster's ATTACK");
+		btnMSTATK.setForeground(new Color(255, 0, 0));
+		btnMSTATK.setFont(new Font("Baskerville Old Face", Font.PLAIN, 12));
 		btnMSTATK.setBounds(160, 0, 150, 30);
 		panel2.add(btnMSTATK);
 		
@@ -214,26 +235,26 @@ public class BattleView extends JFrame {
 		btnMSTATK.addActionListener(new ActionListener()  {
             public void actionPerformed(ActionEvent e) {
             	p2.attack(p1);
-                bar1.setValue(p1.getHp());
-                textArea.append(p2.name+ "이 " + p1.name + "을 공격합니다.\n");
+                bar1.setValue(p1.getHP());
+                textArea.append(p2.name+"이 "+p1.name+"을 공격합니다.\n");
                 
-                // Musician의 체력이 0인 경우 처리
-                if (p1.getHp() == 0) {
-                    new EndingView("lose").setVisible(true);
+                // Musician의 체력이 0인 경우 처리: 패배했으므로 GameOverView
+                if (p1.getHP() == 0) {
+                    new GameOverView().setVisible(true);
                     setVisible(false);
                 }
             }
         });
 	}
 	
-	public BattleView(Player player1, Player player2) {
+	public BattleView(Musician player1, Monster player2) {
 
 		this();
 		p1 = player1;
 		p2 = player2;
 		// bar1의 최대값과 현재값도 setting
-		bar1.setMaximum(p1.getHp());
-		bar2.setMaximum(p2.getHp());
+		bar1.setMaximum(p1.getHP());
+		bar2.setMaximum(p2.getHP());
 		bar1.setValue(bar1.getMaximum());
 		bar2.setValue(bar2.getMaximum());
 

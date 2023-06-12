@@ -13,7 +13,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import player.Player;
+import java.util.Random;
+
+import player.*;
+import java.awt.Font;
 
 public class MusicianSelectView extends JFrame {
 
@@ -21,7 +24,9 @@ public class MusicianSelectView extends JFrame {
 	private JLabel titleLabel;
     private Image backgroundImage; //배경이미지
     
-    Player p1, p2;
+    public static int monCnt=1; //첫번째 몬스터부터 플레이
+    Musician p1;
+    Monster p2;
 
 	/**
 	 * Launch the application.
@@ -71,50 +76,58 @@ public class MusicianSelectView extends JFrame {
         contentPane.add(titleLabel);
         
         
-		JButton btn1 = new JButton("VOCALIST");
+		JButton btn1 = new JButton("SINGER");
+		btn1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 15));
 		btn1.setBounds(100, 180, 120, 200);
         contentPane.add(btn1);
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-        		p1 = new Player("Avril", 1000, 100, "singer.png");
+        		p1 = new Musician("singer");
         	}
         });
 
         JButton btn2 =  new JButton("GUITARIST");
+        btn2.setFont(new Font("Baskerville Old Face", Font.PLAIN, 15));
         btn2.setBounds(250, 180, 120, 200);
         contentPane.add(btn2);
         btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-        		p1 = new Player("Choi", 1000, 100, "guitarist.png");
+        		p1 = new Musician("guitarist");
         	}
         });
 
         JButton btn3 =  new JButton("BASSIST");
+        btn3.setFont(new Font("Baskerville Old Face", Font.PLAIN, 15));
         btn3.setBounds(400, 180, 120, 200);
         contentPane.add(btn3);
         btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-        		p1 = new Player("Kate", 1000, 100, "bassist.png");
+        		p1 = new Musician("bassist");
         	}
         });
 
         JButton btn4 =  new JButton("DRUMMER");
+        btn4.setFont(new Font("Baskerville Old Face", Font.PLAIN, 15));
         btn4.setBounds(550, 180, 120, 200);
         contentPane.add(btn4);
         btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-        		p1 = new Player("Josh", 1000, 100, "drummer.png");
+        		p1 = new Musician("drummer");
         	}
         });
 
         JButton btn5 = new JButton("LET'S BATTLE!!");
+        btn5.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
         btn5.setBounds(300, 420, 172, 50);
         contentPane.add(btn5);        
         btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				p2 = new Player("Alien", 1000, 100, "monster_1.png");
-				new BattleView(p1, p2).setVisible(true);
-        		setVisible(false);
+				if(p1 != null) { // p1이 선택된 후에만 BattleView로 이동할 수 있다
+					//monCnt의 값 증가는 NextGameView, GameOverView, GameCLerView에서 이루어진다
+					p2 = new Monster("monster"+monCnt);
+					new BattleView(p1, p2).setVisible(true);
+	        		setVisible(false);
+				}
         	}
         });
 	}
