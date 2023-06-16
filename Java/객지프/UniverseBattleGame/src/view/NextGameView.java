@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -15,7 +14,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 
 public class NextGameView extends JFrame {
 
@@ -30,7 +28,7 @@ public class NextGameView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					StartView frame = new StartView();
+					NextGameView frame = new NextGameView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,6 +41,7 @@ public class NextGameView extends JFrame {
 	 * Create the frame.
 	 */
 	public NextGameView() {
+        setTitle("Universe Battle Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 780, 600);		
 		contentPane = new JPanel() {
@@ -57,7 +56,7 @@ public class NextGameView extends JFrame {
             }
         };		
 		// 배경 이미지 설정
-        String imagePath = ".\\src\\file\\universe.jpg";
+        String imagePath = "./src/images/universe.jpg";
         backgroundImage = new ImageIcon(imagePath).getImage();
         
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -71,6 +70,9 @@ public class NextGameView extends JFrame {
         loseText.setBounds(173, 158, 451, 105);
         contentPane.add(loseText);
 
+        //다음 몬스터 깨기
+        MusicianSelectView.monCnt++;
+        
         JButton continuebtn = new JButton("CONTINUE");
         continuebtn.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
         continuebtn.setBounds(300, 350, 160, 50);
@@ -91,9 +93,9 @@ public class NextGameView extends JFrame {
     			new StartView().setVisible(true);
     			setVisible(false);
         	}
-        });
-        
-        //다음 몬스터 깨기
-        MusicianSelectView.monCnt++;
+        });        
+
+        //배경음악
+		BackgroundMusic.music.play(4);
 	}
 }

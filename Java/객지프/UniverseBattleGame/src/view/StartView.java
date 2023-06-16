@@ -1,11 +1,11 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -13,14 +13,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;//글씨쓰기
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Font;
 
 public class StartView extends JFrame {
-
+	
 	private JPanel contentPane;
 	private JLabel titleLabel;
     private Image backgroundImage; //배경이미지
-
+    
 	/**
 	 * Launch the application.
 	 */    
@@ -41,6 +40,7 @@ public class StartView extends JFrame {
 	 * Create the frame.
 	 */
 	public StartView() {
+        setTitle("Universe Battle Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 780, 600);		
 		contentPane = new JPanel() {
@@ -52,9 +52,9 @@ public class StartView extends JFrame {
                     g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
                 }
             }
-        };		
+        };
 		// 배경 이미지 설정
-        String imagePath = ".\\src\\file\\universe.jpg";
+        String imagePath = "./src/images/universe.jpg";
         backgroundImage = new ImageIcon(imagePath).getImage();
         
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -65,7 +65,7 @@ public class StartView extends JFrame {
 		//글자 이미지 띄움
         titleLabel = new JLabel();
         titleLabel.setBounds(200, 110, 390, 260);
-        titleLabel.setIcon(new ImageIcon("./src/file/title.png"));
+        titleLabel.setIcon(new ImageIcon("./src/images/title.png"));
         contentPane.add(titleLabel);
         
 		//시작버튼, MusicianSelectView()를 visible시킨다
@@ -77,9 +77,14 @@ public class StartView extends JFrame {
         	public void actionPerformed(ActionEvent e) {
     			new MusicianSelectView().setVisible(true);
     			setVisible(false);
+                BackgroundMusic.music.play(101);
         	}
         });
 		
+        //배경음악
+		BackgroundMusic.music.setLocation(contentPane.getX()+645, contentPane.getY()+675);
+		BackgroundMusic.music.setVisible(true);
+		BackgroundMusic.music.play(0);
 	}
 
 }

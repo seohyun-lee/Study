@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,7 +19,6 @@ import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
 import player.*;
-import java.awt.Font;
 
 public class BattleView extends JFrame {
 
@@ -66,6 +66,7 @@ public class BattleView extends JFrame {
 	 * Create the frame.
 	 */
 	public BattleView() {
+        setTitle("Universe Battle Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 780, 600);
 		contentPane = new JPanel() {
@@ -79,13 +80,14 @@ public class BattleView extends JFrame {
             }
         };		
 		// 배경 이미지 설정
-        String imagePath = ".\\src\\file\\universe.jpg";
+        String imagePath = "./src/images/universe.jpg";
         backgroundImage = new ImageIcon(imagePath).getImage();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
+		
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		setLocationRelativeTo(null); //JFrame 화면 중앙에 배치
+		
 		
 		//Musician
 		panel1 = new JPanel();
@@ -128,7 +130,7 @@ public class BattleView extends JFrame {
 		//spark 이미지
         sparkLabel = new JLabel();
         sparkLabel.setBounds(270, 50, 300, 300);
-        sparkLabel.setIcon(new ImageIcon("./src/file/spark.png"));
+        sparkLabel.setIcon(new ImageIcon("./src/images/spark.png"));
         contentPane.add(sparkLabel);
 
 		//scrollPane, textArea
@@ -166,13 +168,12 @@ public class BattleView extends JFrame {
                 p1.attack(p2);
                 bar2.setValue(p2.getHP());
                 textArea.append(p1.name+"이 "+p2.name+"을 공격합니다.\n");
-                
+
                 // 공격후 Monster의 체력이 0인 경우 처리: 마지막 몬스터가 아니라면 NextGameView, 마지막 몬스터라면 GameClearView
                 if (p2.getHP() == 0) {
                 	if(MusicianSelectView.monCnt < 4) {
                         new NextGameView().setVisible(true);
-                	}
-                	else {
+                	} else {
                 		new GameClearView().setVisible(true);
                 	}
                     setVisible(false);
@@ -188,7 +189,6 @@ public class BattleView extends JFrame {
             public void actionPerformed(ActionEvent e) {
             	p1.defense();
                 textArea.append(p1.name+"이 공격을 방어할 준비를 합니다.\n");
-                
             }
         });
         
@@ -198,7 +198,6 @@ public class BattleView extends JFrame {
             	p1.rest();
                 bar1.setValue(p1.getHP());
                 textArea.append(p1.name+"이 휴식을 취해 체력을 회복합니다.\n");
-                
             }
         });
         
@@ -214,8 +213,7 @@ public class BattleView extends JFrame {
                 if (p2.getHP() == 0) {
                 	if(MusicianSelectView.monCnt < 4) {
                         new NextGameView().setVisible(true);
-                	}
-                	else {
+                	} else {
                 		new GameClearView().setVisible(true);
                 	}
                     setVisible(false);
@@ -245,6 +243,13 @@ public class BattleView extends JFrame {
                 }
             }
         });
+		
+        //배경음악
+		if(MusicianSelectView.monCnt < 4) {
+			BackgroundMusic.music.play(2);
+		} else {
+			BackgroundMusic.music.play(6);
+		}
 	}
 	
 	public BattleView(Musician player1, Monster player2) {

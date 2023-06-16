@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -15,7 +14,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 
 public class GameClearView extends JFrame {
 
@@ -30,7 +28,7 @@ public class GameClearView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					StartView frame = new StartView();
+					GameClearView frame = new GameClearView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,6 +41,7 @@ public class GameClearView extends JFrame {
 	 * Create the frame.
 	 */
 	public GameClearView() {
+        setTitle("Universe Battle Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 780, 600);		
 		contentPane = new JPanel() {
@@ -57,7 +56,7 @@ public class GameClearView extends JFrame {
             }
         };		
 		// 배경 이미지 설정
-        String imagePath = ".\\src\\file\\universe.jpg";
+        String imagePath = "./src/images/universe.jpg";
         backgroundImage = new ImageIcon(imagePath).getImage();
         
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -79,11 +78,12 @@ public class GameClearView extends JFrame {
         	public void actionPerformed(ActionEvent e) {
     			new StartView().setVisible(true);
     			setVisible(false);
+    	        //몬스터 번호 초기화
+    	        MusicianSelectView.monCnt=1;
         	}
-        });
-        
-        //몬스터 번호 초기화
-        MusicianSelectView.monCnt=1;
-		
+        });        
+
+        //배경음악
+		BackgroundMusic.music.play(5);
 	}
 }

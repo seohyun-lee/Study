@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Font;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -13,10 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import java.util.Random;
-
 import player.*;
-import java.awt.Font;
 
 public class MusicianSelectView extends JFrame {
 
@@ -48,6 +46,7 @@ public class MusicianSelectView extends JFrame {
 	 * Create the frame.
 	 */
 	public MusicianSelectView() {
+        setTitle("Universe Battle Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 780, 600);
 		contentPane = new JPanel() {
@@ -61,27 +60,28 @@ public class MusicianSelectView extends JFrame {
             }
         };		
 		// 배경 이미지 설정
-        String imagePath = ".\\src\\file\\universe.jpg";
+        String imagePath = "./src/images/universe.jpg";
         backgroundImage = new ImageIcon(imagePath).getImage();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
 		setContentPane(contentPane);
 		contentPane.setLayout(null); //배치 관리자 삭제-컴포넌트를 Absolute Layout으로 배치하고자.
 		setLocationRelativeTo(null); //JFrame 화면 중앙에 배치
-		
+				
 		//글자 이미지
         titleLabel = new JLabel();
         titleLabel.setBounds(215, 72, 341, 85);
-        titleLabel.setIcon(new ImageIcon("./src/file/selectplayer.png"));
+        titleLabel.setIcon(new ImageIcon("./src/images/selectplayer.png"));
         contentPane.add(titleLabel);
         
-        
+        //버튼들
 		JButton btn1 = new JButton("SINGER");
 		btn1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 15));
 		btn1.setBounds(100, 180, 120, 200);
         contentPane.add(btn1);
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+	            BackgroundMusic.music.play(102);
         		p1 = new Musician("singer");
         	}
         });
@@ -92,6 +92,7 @@ public class MusicianSelectView extends JFrame {
         contentPane.add(btn2);
         btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+	            BackgroundMusic.music.play(102);
         		p1 = new Musician("guitarist");
         	}
         });
@@ -102,6 +103,7 @@ public class MusicianSelectView extends JFrame {
         contentPane.add(btn3);
         btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+	            BackgroundMusic.music.play(102);
         		p1 = new Musician("bassist");
         	}
         });
@@ -112,6 +114,7 @@ public class MusicianSelectView extends JFrame {
         contentPane.add(btn4);
         btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+	            BackgroundMusic.music.play(102);
         		p1 = new Musician("drummer");
         	}
         });
@@ -122,13 +125,19 @@ public class MusicianSelectView extends JFrame {
         contentPane.add(btn5);        
         btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(101);
 				if(p1 != null) { // p1이 선택된 후에만 BattleView로 이동할 수 있다
 					//monCnt의 값 증가는 NextGameView, GameOverView, GameCLerView에서 이루어진다
 					p2 = new Monster("monster"+monCnt);
 					new BattleView(p1, p2).setVisible(true);
 	        		setVisible(false);
+				} else {
+					
 				}
         	}
         });
+
+        //배경음악
+		BackgroundMusic.music.play(1);
 	}
 }

@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -15,7 +14,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 
 public class GameOverView extends JFrame {
 
@@ -30,7 +28,7 @@ public class GameOverView extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					StartView frame = new StartView();
+					GameOverView frame = new GameOverView();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,6 +41,7 @@ public class GameOverView extends JFrame {
 	 * Create the frame.
 	 */
 	public GameOverView() {
+        setTitle("Universe Battle Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 780, 600);		
 		contentPane = new JPanel() {
@@ -57,7 +56,7 @@ public class GameOverView extends JFrame {
             }
         };		
 		// 배경 이미지 설정
-        String imagePath = ".\\src\\file\\universe.jpg";
+        String imagePath = "./src/images/universe.jpg";
         backgroundImage = new ImageIcon(imagePath).getImage();
         
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -70,7 +69,7 @@ public class GameOverView extends JFrame {
         loseText.setFont(new Font("Baskerville Old Face", Font.BOLD | Font.ITALIC, 70));
         loseText.setBounds(178, 172, 434, 105);
         contentPane.add(loseText);
-		
+        
         JButton returnbtn = new JButton("RETURN");
         returnbtn.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
         returnbtn.setBounds(300, 420, 160, 50);
@@ -81,5 +80,8 @@ public class GameOverView extends JFrame {
     			setVisible(false);
         	}
         });
+        
+        //배경음악
+		BackgroundMusic.music.play(3);
 	}
 }

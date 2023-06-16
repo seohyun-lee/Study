@@ -35,7 +35,7 @@ public class Player {
 	}
 
 	public void setImgFile(String imgFile) {
-		this.imgFile = "./src/file/" + imgFile;
+		this.imgFile = "./src/images/" + imgFile;
 	}
 
 	public int getDEF() {
