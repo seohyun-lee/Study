@@ -19,11 +19,7 @@ public class GameClearView extends JFrame {
 
 	private JPanel contentPane;
     private Image backgroundImage; //배경이미지
-    private String text;
 
-	/**
-	 * Launch the application.
-	 */    
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -62,24 +58,31 @@ public class GameClearView extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		setLocationRelativeTo(null);
+		setLocationRelativeTo(null);		
+		
+		//글자 이미지
+		JLabel title = new JLabel();
+		title.setBounds(140, 70, 600, 100);
+		title.setIcon(new ImageIcon("./src/images/gameclear.png"));
+        contentPane.add(title);
         
-        JLabel loseText = new JLabel("GAME CLEAR!!!!!");
-        loseText.setForeground(new Color(255, 255, 255));
-        loseText.setFont(new Font("Baskerville Old Face", Font.BOLD | Font.ITALIC, 70));
-        loseText.setBounds(84, 172, 609, 105);
-        contentPane.add(loseText);
+        //musicians 이미지
+        JLabel image = new JLabel();
+        image.setBounds(55, 170, 620, 270);
+        image.setIcon(new ImageIcon("./src/images/musicians.png"));
+        contentPane.add(image);
 		
         JButton returnbtn = new JButton("RESET");
         returnbtn.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
-        returnbtn.setBounds(300, 420, 160, 50);
+        returnbtn.setBounds(300, 450, 160, 50);
         contentPane.add(returnbtn);
         returnbtn.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(101);
     			new StartView().setVisible(true);
     			setVisible(false);
     	        //몬스터 번호 초기화
-    	        MusicianSelectView.monCnt=1;
+    	        SelectPlayerView.monCnt=1;
         	}
         });        
 

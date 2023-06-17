@@ -19,11 +19,7 @@ public class GameOverView extends JFrame {
 
 	private JPanel contentPane;
     private Image backgroundImage; //배경이미지
-    private String text;
 
-	/**
-	 * Launch the application.
-	 */    
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -65,7 +61,7 @@ public class GameOverView extends JFrame {
 		setLocationRelativeTo(null);
         
         JLabel loseText = new JLabel("YOU LOSE...");
-        loseText.setForeground(new Color(192, 192, 192));
+        loseText.setForeground(new Color(210, 210, 210));
         loseText.setFont(new Font("Baskerville Old Face", Font.BOLD | Font.ITALIC, 70));
         loseText.setBounds(178, 172, 434, 105);
         contentPane.add(loseText);
@@ -76,6 +72,7 @@ public class GameOverView extends JFrame {
         contentPane.add(returnbtn);
         returnbtn.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(101);
     			new StartView().setVisible(true);
     			setVisible(false);
         	}

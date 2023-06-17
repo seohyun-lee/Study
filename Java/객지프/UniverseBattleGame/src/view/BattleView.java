@@ -98,7 +98,7 @@ public class BattleView extends JFrame {
 
 		label1 = new JLabel();
 		label1.setBounds(0, 0, 310, 310);
-		label1.setIcon(new ImageIcon(p1.getImgFile())); //임시
+		label1.setIcon(new ImageIcon(p1.getImgFile()));
 		panel1.add(label1);
 		
 		bar1 = new JProgressBar();
@@ -139,6 +139,8 @@ public class BattleView extends JFrame {
 		contentPane.add(scrollPane);
 
 		textArea = new JTextArea();
+		textArea.setForeground(new Color(255, 255, 255));
+		textArea.setBackground(new Color(0, 0, 64));
 		scrollPane.setViewportView(textArea);
 		
 		//버튼들
@@ -165,13 +167,14 @@ public class BattleView extends JFrame {
 		// 공격 버튼 리스너
         btnATK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(201);        		
                 p1.attack(p2);
                 bar2.setValue(p2.getHP());
                 textArea.append(p1.name+"이 "+p2.name+"을 공격합니다.\n");
 
                 // 공격후 Monster의 체력이 0인 경우 처리: 마지막 몬스터가 아니라면 NextGameView, 마지막 몬스터라면 GameClearView
                 if (p2.getHP() == 0) {
-                	if(MusicianSelectView.monCnt < 4) {
+                	if(SelectPlayerView.monCnt < 4) {
                         new NextGameView().setVisible(true);
                 	} else {
                 		new GameClearView().setVisible(true);
@@ -187,6 +190,7 @@ public class BattleView extends JFrame {
         // 방어 버튼 리스너
         btnDEF.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(202);
             	p1.defense();
                 textArea.append(p1.name+"이 공격을 방어할 준비를 합니다.\n");
             }
@@ -195,6 +199,7 @@ public class BattleView extends JFrame {
         // 휴식 버튼 리스너
         btnRST.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(203);
             	p1.rest();
                 bar1.setValue(p1.getHP());
                 textArea.append(p1.name+"이 휴식을 취해 체력을 회복합니다.\n");
@@ -204,6 +209,7 @@ public class BattleView extends JFrame {
         // 스페셜 버튼 리스너
         btnSPC.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(204);
             	p1.special(p2);
                 bar2.setValue(p2.getHP());
                 textArea.append(p1.name+"이 "+p2.name+"에게 아주 강한 공격을 사용했습니다!\n");
@@ -211,7 +217,7 @@ public class BattleView extends JFrame {
                 
                 // 공격후 Monster의 체력이 0인 경우 처리: 마지막 몬스터가 아니라면 NextGameView, 마지막 몬스터라면 GameClearView
                 if (p2.getHP() == 0) {
-                	if(MusicianSelectView.monCnt < 4) {
+                	if(SelectPlayerView.monCnt < 4) {
                         new NextGameView().setVisible(true);
                 	} else {
                 		new GameClearView().setVisible(true);
@@ -232,6 +238,7 @@ public class BattleView extends JFrame {
 		// 리스너
 		btnMSTATK.addActionListener(new ActionListener()  {
             public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(211);
             	p2.attack(p1);
                 bar1.setValue(p1.getHP());
                 textArea.append(p2.name+"이 "+p1.name+"을 공격합니다.\n");
@@ -245,7 +252,7 @@ public class BattleView extends JFrame {
         });
 		
         //배경음악
-		if(MusicianSelectView.monCnt < 4) {
+		if(SelectPlayerView.monCnt < 4) {
 			BackgroundMusic.music.play(2);
 		} else {
 			BackgroundMusic.music.play(6);

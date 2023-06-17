@@ -75,9 +75,9 @@ public class StartView extends JFrame {
         contentPane.add(startbtn);
         startbtn.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-    			new MusicianSelectView().setVisible(true);
-    			setVisible(false);
                 BackgroundMusic.music.play(101);
+    			new SelectPlayerView().setVisible(true);
+    			setVisible(false);
         	}
         });
 		

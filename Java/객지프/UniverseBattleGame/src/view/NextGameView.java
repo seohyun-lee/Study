@@ -19,11 +19,7 @@ public class NextGameView extends JFrame {
 
 	private JPanel contentPane;
     private Image backgroundImage; //배경이미지
-    private String text;
 
-	/**
-	 * Launch the application.
-	 */    
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -71,7 +67,7 @@ public class NextGameView extends JFrame {
         contentPane.add(loseText);
 
         //다음 몬스터 깨기
-        MusicianSelectView.monCnt++;
+        SelectPlayerView.monCnt++;
         
         JButton continuebtn = new JButton("CONTINUE");
         continuebtn.setFont(new Font("Baskerville Old Face", Font.PLAIN, 18));
@@ -79,7 +75,8 @@ public class NextGameView extends JFrame {
         contentPane.add(continuebtn);
         continuebtn.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-    			new MusicianSelectView().setVisible(true);
+                BackgroundMusic.music.play(101);
+    			new SelectPlayerView().setVisible(true);
     			setVisible(false);
         	}
         });
@@ -90,6 +87,7 @@ public class NextGameView extends JFrame {
         contentPane.add(returnbtn);
         returnbtn.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
+                BackgroundMusic.music.play(101);
     			new StartView().setVisible(true);
     			setVisible(false);
         	}

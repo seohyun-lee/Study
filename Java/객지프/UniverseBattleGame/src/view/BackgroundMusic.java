@@ -57,6 +57,17 @@ public class BackgroundMusic extends JFrame {
     		sfxPlay("./src/music/click_sfx.wav");
     	else if (i==102)
     		sfxPlay("./src/music/select_sfx.wav");
+
+    	else if (i==201)
+    		sfxPlay("./src/music/attack_sfx.wav");
+    	else if (i==202)
+    		sfxPlay("./src/music/defense_sfx.wav");
+    	else if (i==203)
+    		sfxPlay("./src/music/rest_sfx.wav");
+    	else if (i==204)
+    		sfxPlay("./src/music/special_sfx.wav");
+    	else if (i==211)
+    		sfxPlay("./src/music/attacked_sfx.wav");
     }
 
     private void bgmPlay(String file) {
