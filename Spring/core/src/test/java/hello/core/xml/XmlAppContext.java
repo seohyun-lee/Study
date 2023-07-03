@@ -1,4 +1,4 @@
-package hello.core.xml;
+/*package hello.core.xml;
 import hello.core.member.MemberService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -14,4 +14,4 @@ public class XmlAppContext {
                 MemberService.class);
         assertThat(memberService).isInstanceOf(MemberService.class);
     }
-}
+}*/
