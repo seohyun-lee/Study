@@ -2,8 +2,9 @@ package jpp_0912;
 
 import java.util.Scanner;
 
-//week02 37p: 증가 및 감소 연산자 사용 예시
 public class Week02Examples {
+
+	//증감 연산자
 	public void example05() {
 		int x = 10;
 		System.out.println(x++); //10출력, 11
@@ -20,13 +21,16 @@ public class Week02Examples {
 		System.out.println("c-- => " + (c--));
 		System.out.println("--d => " + (--d));
 	}
-	
+
+	//자동 형변환
 	public void example06() {
 		int i = 100;
 		long l = i;
-		float f = l; System.out.println(i); System.out.println(l); System.out.println(f);
+		float f = l;
+		System.out.println(i);
+		System.out.println(l);
+		System.out.println(f);
 	}
-	
 	
 	public void typeConversion1() {
 		int x = 10;
@@ -36,8 +40,8 @@ public class Week02Examples {
 		System.out.println(x * y);
 		System.out.println(x / y);
 	}
-	
-	//캐스팅 형 변환 사용 예시
+
+	//캐스팅 형변환
 	public void example07() {
 		double d = 3.14;
 		long l = (long)d; int i = (int)l;
@@ -51,7 +55,8 @@ public class Week02Examples {
 		System.out.println(x / (int) y);
 		System.out.println((int) (x / y));
 	}
-	
+
+	//입력처리(Scanner)
 	public void example08() {
 		Scanner input = new Scanner(System.in);
 		System.out.println("당신의 이름을 입력하세요.");
