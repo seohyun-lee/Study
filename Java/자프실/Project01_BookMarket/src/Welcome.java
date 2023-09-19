@@ -6,7 +6,7 @@ public class Welcome {
 		String s1 = "Welcome to Shopping Mall";
 		String s2 = "Welcome to Book Market!";
 		System.out.println("*********************************************");
-		System.out.println("\t" + s1); //ÀÎ»ç¸»À» º¯¼ö¿¡ ÀúÀåÇÏ¿© Ãâ·Â
+		System.out.println("\t" + s1); //ì¸ì‚¬ë§ì„ ë³€ìˆ˜ì— ì €ì¥í•˜ì—¬ ì¶œë ¥
 		System.out.println("\t" + s2);
 		System.out.println("*********************************************");
 		System.out.println(" " + msg[1] + "\t" + msg[4]);
@@ -18,19 +18,19 @@ public class Welcome {
 	}
 	
 	private static void showCustomerInfo(String userName, int phoneNumber) {
-		System.out.println("ÇöÀç °í°´ Á¤º¸ : ");
-		System.out.println("ÀÌ¸§ "+ userName + "\t\t¿¬¶ôÃ³ " + phoneNumber);
+		System.out.println("í˜„ì¬ ê³ ê° ì •ë³´ : ");
+		System.out.println("ì´ë¦„ "+ userName + "\t\tì—°ë½ì²˜ " + phoneNumber);
 	}
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.print("´ç½ÅÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë‹¹ì‹ ì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		String userName = input.nextLine();
-		System.out.print("¿¬¶ôÃ³¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì—°ë½ì²˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int phoneNumber = input.nextInt();
-		String[] msg = {"¸Ş´º ¹øÈ£¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä ", "1. °í°´ Á¤º¸ È®ÀÎÇÏ±â", "2. Àå¹Ù±¸´Ï »óÇ° ¸ñ·Ï º¸±â", "3. Àå¹Ù±¸´Ï ºñ¿ì±â",
-				"4. ¹Ù±¸´Ï¿¡ Ç×¸ñ Ãß°¡ÇÏ±â", "5. Àå¹Ù±¸´ÏÀÇ Ç×¸ñ ¼ö·® ÁÙÀÌ±â", "6. Àå¹Ù±¸´ÏÀÇ Ç×¸ñ »èÁ¦ÇÏ±â",
-				"7. ¿µ¼öÁõ Ç¥½ÃÇÏ±â", "8. Á¾·á"};
+		String[] msg = {"ë©”ë‰´ ë²ˆí˜¸ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš” ", "1. ê³ ê° ì •ë³´ í™•ì¸í•˜ê¸°", "2. ì¥ë°”êµ¬ë‹ˆ ìƒí’ˆ ëª©ë¡ ë³´ê¸°", "3. ì¥ë°”êµ¬ë‹ˆ ë¹„ìš°ê¸°",
+				"4. ë°”êµ¬ë‹ˆì— í•­ëª© ì¶”ê°€í•˜ê¸°", "5. ì¥ë°”êµ¬ë‹ˆì˜ í•­ëª© ìˆ˜ëŸ‰ ì¤„ì´ê¸°", "6. ì¥ë°”êµ¬ë‹ˆì˜ í•­ëª© ì‚­ì œí•˜ê¸°",
+				"7. ì˜ìˆ˜ì¦ í‘œì‹œí•˜ê¸°", "8. ì¢…ë£Œ"};
 		while(true)
 		{
 			showMenu(msg);
@@ -46,7 +46,7 @@ public class Welcome {
 					System.out.println(msg[n] + " : ");
 					break;
 				default:
-					System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+					System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.");
 			}
 			if (n == 8)
 				break;
