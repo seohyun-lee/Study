@@ -4,181 +4,181 @@ import java.util.Scanner;
 
 public class Week02Examples2 {
 	
-	//if¹®
+	//ifë¬¸
 /*	public void example01() {
 		int num = 10;
 		
 		if (num > 15) {
-			System.out.println("¼ıÀÚ°¡ 15º¸´Ù Å®´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ 15ë³´ë‹¤ í½ë‹ˆë‹¤.");
 		}
-		System.out.println("ÀÌ ¹®ÀåÀº if¹® ¿ÜºÎ¿¡ ÀÖ½À´Ï´Ù.");
+		System.out.println("ì´ ë¬¸ì¥ì€ ifë¬¸ ì™¸ë¶€ì— ìˆìŠµë‹ˆë‹¤.");
 	}*/
 	
-	//(¿¹Á¦ 4-1) ÅõÇ¥°¡ °¡´ÉÇÑ ³ªÀÌ ÆÇº°ÇÏ±â
+	//(ì˜ˆì œ 4-1) íˆ¬í‘œê°€ ê°€ëŠ¥í•œ ë‚˜ì´ íŒë³„í•˜ê¸°
 	public void if01() {
-		System.out.println("´ç½ÅÀÇ ³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		Scanner s = new Scanner(System.in);
 		int age = s.nextInt();
 		if (age >= 18) {
-			System.out.println("´ç½ÅÀÇ ³ªÀÌ´Â 18¼¼ ÀÌ»óÀÔ´Ï´Ù.");
-			System.out.println("´ç½ÅÀº ÅõÇ¥ÇÒ ÀÚ°İÀÌ ÀÖ½À´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” 18ì„¸ ì´ìƒì…ë‹ˆë‹¤.");
+			System.out.println("ë‹¹ì‹ ì€ íˆ¬í‘œí•  ìê²©ì´ ìˆìŠµë‹ˆë‹¤.");
 		}
-		System.out.println("ÀÌ ¹®ÀåÀº if¹® ¿ÜºÎ¿¡ ÀÖ½À´Ï´Ù.");
+		System.out.println("ì´ ë¬¸ì¥ì€ ifë¬¸ ì™¸ë¶€ì— ìˆìŠµë‹ˆë‹¤.");
 		s.close();
 	}
 	
-	//if-else¹®
+	//if-elseë¬¸
 /*	public void example02() {
 		int num = 120;
 
 		if ( num < 50) {
-			System.out.println("¼ıÀÚ°¡ 50º¸´Ù ÀÛ½À´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ 50ë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("¼ıÀÚ°¡ 50º¸´Ù Å®´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ 50ë³´ë‹¤ í½ë‹ˆë‹¤.");
 		}
 	}*/
 	
-	//(¿¹ÂÅ 4-2) Â¦¼ö, È¦¼ö ÆÇº°ÇÏ±â
+	//(ì˜ˆì©¨ 4-2) ì§ìˆ˜, í™€ìˆ˜ íŒë³„í•˜ê¸°
 	public void if02() {
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");		
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");		
 		Scanner s = new Scanner(System.in);
 		int num = s.nextInt();		
 		if (num % 2 == 0) {
-			System.out.println(num + "Àº Â¦¼öÀÔ´Ï´Ù.");
+			System.out.println(num + "ì€ ì§ìˆ˜ì…ë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println(num + "Àº È¦¼öÀÔ´Ï´Ù.");
+			System.out.println(num + "ì€ í™€ìˆ˜ì…ë‹ˆë‹¤.");
 		}
-		System.out.println("ÀÌ ¹®ÀåÀº if¹® ¿ÜºÎ¿¡ ÀÖ½À´Ï´Ù.");
+		System.out.println("ì´ ë¬¸ì¥ì€ ifë¬¸ ì™¸ë¶€ì— ìˆìŠµë‹ˆë‹¤.");
 		s.close();
 	}
 	
-	//else if¹® »ç¿ëÇÏ´Â Á¶°Ç¹®
+	//else ifë¬¸ ì‚¬ìš©í•˜ëŠ” ì¡°ê±´ë¬¸
 /*	public void example03() {
 		int num = 20;
 
 		if (num == 10) {
-			System.out.println("¼ıÀÚ°¡ 10ÀÔ´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ 10ì…ë‹ˆë‹¤.");
 		}
-		else if (num == 15) {  System.out.println("¼ıÀÚ°¡ 15ÀÔ´Ï´Ù.");
+		else if (num == 15) {  System.out.println("ìˆ«ìê°€ 15ì…ë‹ˆë‹¤.");
 		}
 		else if (num == 20) {
-			System.out.println("¼ıÀÚ°¡ 20ÀÔ´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ 20ì…ë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("¼ıÀÚ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 	}*/
 	
-	//(¿¹Á¦ 4-3) Á¡¼ö¿¡ µû¶ó ÇĞÁ¡ ºÎ¿©ÇÏ±â
+	//(ì˜ˆì œ 4-3) ì ìˆ˜ì— ë”°ë¼ í•™ì  ë¶€ì—¬í•˜ê¸°
 	public void if03() {
-		System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 
 		Scanner s = new Scanner(System.in);
 		int grade = s.nextInt();
 
 		if (grade >= 90) {
-			System.out.println("A ÇĞÁ¡");
+			System.out.println("A í•™ì ");
 		}
 		else if (grade >= 80) {
-			System.out.println("B ÇĞÁ¡");
+			System.out.println("B í•™ì ");
 		}
 		else if (grade >= 70) {
-			System.out.println("C ÇĞÁ¡");
+			System.out.println("C í•™ì ");
 		}
 		else if (grade >= 60) {
-			System.out.println("D ÇĞÁ¡");
+			System.out.println("D í•™ì ");
 		}
 		else {
-			System.out.println("F ÇĞÁ¡");
+			System.out.println("F í•™ì ");
 		}
 		s.close();
 	}
 
-	//ÁßÃ¸ if~else¹® »ç¿ë ¿¹½Ã
+	//ì¤‘ì²© if~elseë¬¸ ì‚¬ìš© ì˜ˆì‹œ
 /*	public void example04() {
 		int num = 70;
 		if (num < 100) {
-			System.out.println("¼ıÀÚ°¡ 100º¸´Ù ÀÛ½À´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ 100ë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤.");
 		}
 		if (num > 50) {
-			System.out.println("¼ıÀÚ°¡ 50º¸´Ù Å®´Ï´Ù.");
+			System.out.println("ìˆ«ìê°€ 50ë³´ë‹¤ í½ë‹ˆë‹¤.");
 		}
 	}*/
 	
-	//(¿¹Á¦ 4-4) Ã¹ ¹øÂ°·Î ÀÔ·ÂµÈ °ªÀÌ ÃÖ´ñ°ªÀÎÁö ÆÇº°ÇÏ±â
+	//(ì˜ˆì œ 4-4) ì²« ë²ˆì§¸ë¡œ ì…ë ¥ëœ ê°’ì´ ìµœëŒ“ê°’ì¸ì§€ íŒë³„í•˜ê¸°
 	public void if04() {
-		System.out.println("3°³ÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("3ê°œì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		Scanner s = new Scanner(System.in);
 		int x = s.nextInt();
 		int y = s.nextInt(); 
 		int z = s.nextInt();
 		if (x > y) {
 			if (x > z) {
-				System.out.println(x +"´Â °¡Àå Å« Á¤¼öÀÔ´Ï´Ù.");
+				System.out.println(x +"ëŠ” ê°€ì¥ í° ì •ìˆ˜ì…ë‹ˆë‹¤.");
 			}
 			else {
-				System.out.println(x +"´Â °¡Àå Å« Á¤¼ö°¡ ¾Æ´Õ´Ï´Ù.");
+				System.out.println(x +"ëŠ” ê°€ì¥ í° ì •ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 			}
 		}
 		else {
-			System.out.println(x +"´Â °¡Àå Å« Á¤¼ö°¡ ¾Æ´Õ´Ï´Ù.");
+			System.out.println(x +"ëŠ” ê°€ì¥ í° ì •ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 		}
 		s.close();
 	}
 	
-	//switch¹® »ç¿ë ¿¹½Ã
+	//switchë¬¸ ì‚¬ìš© ì˜ˆì‹œ
 /*	public void example06() {
 		char grade = 'B';
 		switch (grade) {
 			case 'A':
-				System.out.println("¸Å¿ì ¿ì¼ö");
+				System.out.println("ë§¤ìš° ìš°ìˆ˜");
 				break;
 			case 'B':
-				System.out.println("¿ì¼ö");
+				System.out.println("ìš°ìˆ˜");
 				break;
 			case 'C':
-				System.out.println("ÁÁÀ½");
+				System.out.println("ì¢‹ìŒ");
 				break;
 			case 'D':
-				System.out.println("Á» ´õ ¿­½ÉÈ÷");
+				System.out.println("ì¢€ ë” ì—´ì‹¬íˆ");
 				break;
 			case 'F':
-				System.out.println("¹ÌÈí");
+				System.out.println("ë¯¸í¡");
 				break;
 			default:
-				System.out.println("Àß¸øµÈ µî±Ş");
+				System.out.println("ì˜ëª»ëœ ë“±ê¸‰");
 		}
 	}*/
 	
-	//(¿¹Á¦ 4-5) switch¹®À» È°¿ëÇÏ¿© Á¡¼ö¿¡ µû¶ó ÇĞÁ¡ ºÎ¿©ÇÏ±â
+	//(ì˜ˆì œ 4-5) switchë¬¸ì„ í™œìš©í•˜ì—¬ ì ìˆ˜ì— ë”°ë¼ í•™ì  ë¶€ì—¬í•˜ê¸°
 	public void switch01() {
-		System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		Scanner s = new Scanner(System.in);
 		int num = s.nextInt();
 		switch (num / 10) {
 			case 10 :
 			case 9 :
-				System.out.println("A ÇĞÁ¡");
+				System.out.println("A í•™ì ");
 				break;
 			case 8:
-				System.out.println("B ÇĞÁ¡");
+				System.out.println("B í•™ì ");
 				break;
 			case 7:
-				System.out.println("C ÇĞÁ¡");
+				System.out.println("C í•™ì ");
 				break;
 			case 6:
-				System.out.println("D ÇĞÁ¡");
+				System.out.println("D í•™ì ");
 				break;
 			default:
-				System.out.println("F ÇĞÁ¡");
+				System.out.println("F í•™ì ");
 				break;
 		}
 		s.close();
 	}
 
-	//for¹® »ç¿ë ¿¹½Ã
+	//forë¬¸ ì‚¬ìš© ì˜ˆì‹œ
 /*	public void example07() {
 		int i;
 		for (i = 1; i <= 10; i++) {
@@ -186,20 +186,20 @@ public class Week02Examples2 {
 		}
 	}*/
 	
-	//(¿¹Á¦ 4-6)ÀÔ·Â¹ŞÀº 5°³ ¼ıÀÚÇÕ ±¸ÇÏ±â
+	//(ì˜ˆì œ 4-6)ì…ë ¥ë°›ì€ 5ê°œ ìˆ«ìí•© êµ¬í•˜ê¸°
 	public void loop01() {
 		int sum = 0;
-		System.out.println("5°³ÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("5ê°œì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		for (int n = 1; n <= 5; n++) {
 			Scanner s = new Scanner(System.in);
 			int num = s.nextInt();
-			sum += num;	// sum = sum + num°ú °°Àº ÄÚµå
+			sum += num;	// sum = sum + numê³¼ ê°™ì€ ì½”ë“œ
 			s.close();
 		}
-		System.out.println("ÇÕ°è : " + sum);
+		System.out.println("í•©ê³„ : " + sum);
 	}
 	
-	//while¹® »ç¿ë ¿¹½Ã
+	//whileë¬¸ ì‚¬ìš© ì˜ˆì‹œ
 /*	public void example08() {
 		int i = 1;
 		while (i <= 10) {
@@ -208,28 +208,28 @@ public class Week02Examples2 {
 		}
 	}*/
 
-	//(¿¹Á¦ 4-7) Â¦¼ö¿Í È¦¼ö ÆÇº° Áö¼Ó ¿©ºÎ È®ÀÎÇÏ±â
+	//(ì˜ˆì œ 4-7) ì§ìˆ˜ì™€ í™€ìˆ˜ íŒë³„ ì§€ì† ì—¬ë¶€ í™•ì¸í•˜ê¸°
 	public void loop02() {
 		Scanner s = new Scanner(System.in);
 		int choice = 1;
 		while (choice == 1) {
 			int a;
-			System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 			a = s.nextInt();
 			
 			if (a % 2 == 0) {
-				System.out.println("Â¦¼öÀÔ´Ï´Ù.");
+				System.out.println("ì§ìˆ˜ì…ë‹ˆë‹¤.");
 			} else {
-				System.out.println("È¦¼öÀÔ´Ï´Ù.");
+				System.out.println("í™€ìˆ˜ì…ë‹ˆë‹¤.");
 			}
-			System.out.println("°è¼ÓÇÏ°í ½Í´Ù¸é ¿¹ 1, ±×¸¸ÇÏ°í ½Í´Ù¸é ¾Æ´Ï¿ä 0À» ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("ê³„ì†í•˜ê³  ì‹¶ë‹¤ë©´ ì˜ˆ 1, ê·¸ë§Œí•˜ê³  ì‹¶ë‹¤ë©´ ì•„ë‹ˆìš” 0ì„ ì…ë ¥í•˜ì„¸ìš”.");
 			choice = s.nextInt();
 		}
-		System.out.println("¸ğµç ¼ıÀÚ¸¦ È®ÀÎÇß½À´Ï´Ù.");
+		System.out.println("ëª¨ë“  ìˆ«ìë¥¼ í™•ì¸í–ˆìŠµë‹ˆë‹¤.");
 		s.close();
 	}
 	
-	//do-while¹®
+	//do-whileë¬¸
 /*	public void example09() {
 		int i = 1;
 		do {
@@ -237,36 +237,36 @@ public class Week02Examples2 {
 		} while ( i < 6 );
 	}*/
 	
-	//(¿¹Á¦ 4-8) 10º¸´Ù Å« ¼öºÎÅÍ 10±îÁöÀÇ ÇÕ ±¸ÇÏ±â
+	//(ì˜ˆì œ 4-8) 10ë³´ë‹¤ í° ìˆ˜ë¶€í„° 10ê¹Œì§€ì˜ í•© êµ¬í•˜ê¸°
 	public void loop03() {
 		Scanner s = new Scanner(System.in);
-		System.out.println("10º¸´Ù Å« ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("10ë³´ë‹¤ í° ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		int x = s.nextInt();
 		int sum = 0;
 		do {
 			sum += x;
 			x--;
 		} while (x >= 10);
-		System.out.println("ÇÕ°è : " + sum);
+		System.out.println("í•©ê³„ : " + sum);
 		s.close();
 	}
 	
-	//ÁßÃ¸ ¹İ¸ñ¹®
+	//ì¤‘ì²© ë°˜ëª©ë¬¸
 /*	public void example10() {
 		for (int i = 2; i <= 4; i++) {
-			System.out.println("±¸±¸´Ü " + i +" ´Ü");
+			System.out.println("êµ¬êµ¬ë‹¨ " + i +" ë‹¨");
 			for (int j = 1; j <= 10; j++) {
 				System.out.println(i + " * " + j + " = " + (i * j));
 			}
 		}
 	}*/
 	
-	//½Ç½À - ÁßÃ¸ ¹İ¸ñ¹® ÄÚµå º¯ÇüÇØ ±¸±¸´ÜÀ» ¿·À¸·Î Âï¾îº¸ÀÚ
+	//ì‹¤ìŠµ - ì¤‘ì²© ë°˜ëª©ë¬¸ ì½”ë“œ ë³€í˜•í•´ êµ¬êµ¬ë‹¨ì„ ì˜†ìœ¼ë¡œ ì°ì–´ë³´ì
 	public static void ninenine() {
 		for (int j = 0; j <= 10; j++) {
 			for (int i = 2; i <= 4; i++) {
 				if (j == 0)
-					System.out.print("±¸±¸´Ü " + i +" ´Ü\t");
+					System.out.print("êµ¬êµ¬ë‹¨ " + i +" ë‹¨\t");
 				else
 					System.out.print(i + " * " + j + " = " + (i * j) + "\t");
 			}
@@ -274,14 +274,14 @@ public class Week02Examples2 {
 		}
 	}
 	
-	//½Ç½À - (¿¹Á¦ 4-9) º°Ç¥·Î ¿ª»ï°¢Çü ¸¸µé±â º¯ÇüÇØ ¸¶¸§¸ğ Ãâ·Â
+	//ì‹¤ìŠµ - (ì˜ˆì œ 4-9) ë³„í‘œë¡œ ì—­ì‚¼ê°í˜• ë§Œë“¤ê¸° ë³€í˜•í•´ ë§ˆë¦„ëª¨ ì¶œë ¥
 	public static void loop04() {
 		Scanner s = new Scanner(System.in);
 		
-		System.out.print("±æÀÌ : ");
+		System.out.print("ê¸¸ì´ : ");
 		int len = s.nextInt();
-		//Ãß°¡ÇÑ Á¶°Ç½Ä (¾Æ·¡ÀÇ Á¶°Ç¹® °ıÈ£ ¾È ³»¿ë¸¸ º¯°æÇÔ)
-		for (int i = len - 1; i > 0; i--) { //i°¡ 0ÀÏ ¶§ ÃÖ´ë ±æÀÌ Ãâ·ÂÇß¾úÀ¸´Ï Á¦¿ÜÇØ¾ß ÇÔ
+		//ì¶”ê°€í•œ ì¡°ê±´ì‹ (ì•„ë˜ì˜ ì¡°ê±´ë¬¸ ê´„í˜¸ ì•ˆ ë‚´ìš©ë§Œ ë³€ê²½í•¨)
+		for (int i = len - 1; i > 0; i--) { //iê°€ 0ì¼ ë•Œ ìµœëŒ€ ê¸¸ì´ ì¶œë ¥í–ˆì—ˆìœ¼ë‹ˆ ì œì™¸í•´ì•¼ í•¨
 			for (int j = 0; j < i; j++) {
 				System.out.print(" ");
 			}
@@ -308,43 +308,43 @@ public class Week02Examples2 {
 		loop04();
 	}*/
 	
-	//6. »ç¿ëÀÚ Á¤ÀÇ ¸Ş¼­µå »ı¼º
+	//6. ì‚¬ìš©ì ì •ì˜ ë©”ì„œë“œ ìƒì„±
 	
-	//¹İÈ¯ À¯ÇüÀÌ ÀÖ´Â ¸Ş¼­µå | ÀÔ·Â=¸Å°³º¯¼ö, Ãâ·Â=¹İÈ¯À¯Çü
+	//ë°˜í™˜ ìœ í˜•ì´ ìˆëŠ” ë©”ì„œë“œ | ì…ë ¥=ë§¤ê°œë³€ìˆ˜, ì¶œë ¥=ë°˜í™˜ìœ í˜•
 	
-	//ÀÔ·ÂX Ãâ·ÂO ¸Ş¼­µå
+	//ì…ë ¥X ì¶œë ¥O ë©”ì„œë“œ
 	public static String example02_print() {
 		return "Hi";
 	}
 	
-	//ÀÔ·ÂO Ãâ·ÂO ¸Ş¼­µå 
+	//ì…ë ¥O ì¶œë ¥O ë©”ì„œë“œ 
 	public static int example03_add(int x, int y) {
 		return x + y;
 	}
 
 
-	//(¿¹Á¦ 5-2) ¸Å°³º¯¼ö°¡ ¾ø°í ¹İÈ¯°ªÀÌ ÀÖ´Â ¸Ş¼­µå ¼±¾ğ
+	//(ì˜ˆì œ 5-2) ë§¤ê°œë³€ìˆ˜ê°€ ì—†ê³  ë°˜í™˜ê°’ì´ ìˆëŠ” ë©”ì„œë“œ ì„ ì–¸
 	public static int method03_div( ) {
 		int a = 10, b = 5;
 		int result = a / b;
 		return result;
 	}
 	
-	//ÀÔ·ÂX Ãâ·ÂX ¸Ş¼­µå
+	//ì…ë ¥X ì¶œë ¥X ë©”ì„œë“œ
 	public static void example04_print() {
 		System.out.println("Hi! Java");
 	}
 	
-	//ÀÔ·ÂO Ãâ·ÂX ¸Ş¼­µå
+	//ì…ë ¥O ì¶œë ¥X ë©”ì„œë“œ
 	public static void example05_add(int x, int y) {
-		System.out.println(x +"(¿Í)°ú "+ y +"ÀÇ ÇÕÀº "+ (x + y) +"ÀÔ´Ï´Ù.");
+		System.out.println(x +"(ì™€)ê³¼ "+ y +"ì˜ í•©ì€ "+ (x + y) +"ì…ë‹ˆë‹¤.");
 	}
 
-	//¸Ş¼Òµå ¿À¹ö·Îµù. ¸Å°³º¯¼öÀÇ ÀÚ·áÇüÀÌ³ª °³¼ö°¡ ´Ù¸§. ¹İµå½Ã ¸Å°³º¯¼ö°¡ ´Ş¶ó¾ß ¿À¹ö·ÎµùÀÓ.
+	//ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”©. ë§¤ê°œë³€ìˆ˜ì˜ ìë£Œí˜•ì´ë‚˜ ê°œìˆ˜ê°€ ë‹¤ë¦„. ë°˜ë“œì‹œ ë§¤ê°œë³€ìˆ˜ê°€ ë‹¬ë¼ì•¼ ì˜¤ë²„ë¡œë”©ì„.
 	//
 }
 
-//¸Ş¼­µå ¿À¹ö·Îµù ¿¹½Ã
+//ë©”ì„œë“œ ì˜¤ë²„ë¡œë”© ì˜ˆì‹œ
 class Example06 {
 	
 	public static void calculate(int x, int y) {

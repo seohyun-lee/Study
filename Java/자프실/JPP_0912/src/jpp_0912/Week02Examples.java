@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Week02Examples {
 
-	//Áõ°¨ ¿¬»êÀÚ
+	//ì¦ê° ì—°ì‚°ì
 	public void example05() {
 		int x = 10;
-		System.out.println(x++); //10Ãâ·Â, 11
+		System.out.println(x++); //10ì¶œë ¥, 11
 		System.out.println(++x); //12
-		System.out.println(x--); //12 Ãâ·Â, 11
+		System.out.println(x--); //12 ì¶œë ¥, 11
 		System.out.println(--x); //10
 	}
 	
@@ -22,7 +22,7 @@ public class Week02Examples {
 		System.out.println("--d => " + (--d));
 	}
 
-	//ÀÚµ¿ Çüº¯È¯
+	//ìë™ í˜•ë³€í™˜
 	public void example06() {
 		int i = 100;
 		long l = i;
@@ -41,7 +41,7 @@ public class Week02Examples {
 		System.out.println(x / y);
 	}
 
-	//Ä³½ºÆÃ Çüº¯È¯
+	//ìºìŠ¤íŒ… í˜•ë³€í™˜
 	public void example07() {
 		double d = 3.14;
 		long l = (long)d; int i = (int)l;
@@ -56,23 +56,23 @@ public class Week02Examples {
 		System.out.println((int) (x / y));
 	}
 
-	//ÀÔ·ÂÃ³¸®(Scanner)
+	//ì…ë ¥ì²˜ë¦¬(Scanner)
 	public void example08() {
 		Scanner input = new Scanner(System.in);
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”.");
 		String name = input.nextLine();
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§ : " + name);
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ : " + name);
 		input.close();
 	}
 	
 	public void input() {
 		Scanner s1 = new Scanner(System.in);
-		System.out.println("Á¤¼ı°ª ÀÔ·ÂÇÏ±â");
+		System.out.println("ì •ìˆ«ê°’ ì…ë ¥í•˜ê¸°");
 		int n = s1.nextInt();
-		System.out.println("½Ç¼ı°ª ÀÔ·ÂÇÏ±â");
+		System.out.println("ì‹¤ìˆ«ê°’ ì…ë ¥í•˜ê¸°");
 		double db = s1.nextDouble();
-		System.out.println("Á¤¼ı°ª : " + n);
-		System.out.println("½Ç¼ı°ª : " + db);
+		System.out.println("ì •ìˆ«ê°’ : " + n);
+		System.out.println("ì‹¤ìˆ«ê°’ : " + db);
 		s1.close();
 	}
 }

@@ -1,6 +1,6 @@
 package jpp_0919;
 
-//·¡±×µå ¹è¿­: ´ÙÂ÷¿ø ¹è¿­À» ¹è¿­ÀÇ ¹è¿­À» ÀÌ¿ëÇÏ¿© ±¸ÇöÇÑ´Ù (ºñÁ¤Çü Å©±â °¡´É)
+//ë˜ê·¸ë“œ ë°°ì—´: ë‹¤ì°¨ì› ë°°ì—´ì„ ë°°ì—´ì˜ ë°°ì—´ì„ ì´ìš©í•˜ì—¬ êµ¬í˜„í•œë‹¤ (ë¹„ì •í˜• í¬ê¸° ê°€ëŠ¥)
 public class RaggedArray {
 
 	public static void main(String[] args) {
@@ -13,9 +13,9 @@ public class RaggedArray {
 		for (int r = 0; r < ragged.length; r++) {
 			for (int c = 0; c <ragged[r].length; c++) {
 				ragged[r][c] = c;
-				System.out.print(ragged[r][c]); //È®ÀÎ¿ë
+				System.out.print(ragged[r][c]); //í™•ì¸ìš©
 			}
-			System.out.println(); //±¸ºĞ
+			System.out.println(); //êµ¬ë¶„
 		}
 	}
 

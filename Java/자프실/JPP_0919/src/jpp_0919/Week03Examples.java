@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Week03Examples {
 
-	//1Â÷¿ø ¹è¿­ ¼±¾ğ ¿¹½Ã
+	//1ì°¨ì› ë°°ì—´ ì„ ì–¸ ì˜ˆì‹œ
 /*	public static void example01() {
 		int[] myArr = new int[5];
 		myArr[0] = 10;
@@ -13,16 +13,18 @@ public class Week03Examples {
 		myArr[3] = 40;
 		myArr[4] = 50;
 		for (int i = 0; i < 5; i++)
-			System.out.println(i + "¹øÂ° ¿ä¼Ò°ª : "+ myArr[i]);
+			System.out.println(i + "ë²ˆì§¸ ìš”ì†Œê°’ : "+ myArr[i]);
 	}*/
 	
-	//(¿¹Á¦ 6-1) 1Â÷¿ø ¹è¿­À» ÀÌ¿ëÇÏ¿© ¹®ÀÚ¿­ ÀúÀåÇÏ°í Ãâ·ÂÇÏ±â
+	//(ì˜ˆì œ 6-1) 1ì°¨ì› ë°°ì—´ì„ ì´ìš©í•˜ì—¬ ë¬¸ìì—´ ì €ì¥í•˜ê³  ì¶œë ¥í•˜ê¸°
 	public static void array01() {
 		String[] myArr;
 		myArr = new String[3];
 		
 		Scanner s = new Scanner(System.in);
 		
+		System.out.println("3ê°œ ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš”.");
+
 		for(int i = 0; i < 3; i++) {
 			myArr[i] = s.nextLine();
 		}
@@ -30,17 +32,18 @@ public class Week03Examples {
 		for (int i = 0; i< 3; i++) {
 			System.out.println(myArr[i] + "");
 		}
+		s.close();
 	}
 
-	//1Â÷¿ø ¹è¿­ ÃÊ±âÈ­ ¿¹½Ã
+	//1ì°¨ì› ë°°ì—´ ì´ˆê¸°í™” ì˜ˆì‹œ
 /*	public static void example02() {
 		int[] myArr = {10, 20, 30, 40, 50};
 		for (int i = 0; i < myArr.length; i++) {
-			System.out.println(i+ "¹øÂ° ¿ä¼Ò°ª: " + myArr[i]);
+			System.out.println(i+ "ë²ˆì§¸ ìš”ì†Œê°’ : " + myArr[i]);
 		}
 	}*/
 
-	//(¿¹Á¦ 6-2) 1Â÷¿ø ¹è¿­À» ÀÌ¿ëÇÏ¿© ÃÊ±ê°ªÀÇ ÇÕ°ú Æò±Õ ±¸ÇÏ±â
+	//(ì˜ˆì œ 6-2) 1ì°¨ì› ë°°ì—´ì„ ì´ìš©í•˜ì—¬ ì´ˆê¹ƒê°’ì˜ í•©ê³¼ í‰ê·  êµ¬í•˜ê¸°
 	public static void array02() {
 		double[] gradeArr = {90, 70.5, 80, 79, 82.5, 50, 70, 90.2, 89.5, 89.7};
 		double sum = 0.0;
@@ -48,11 +51,11 @@ public class Week03Examples {
 			sum += gradeArr[i];
 		}
 		double average = sum / gradeArr.length;
-		System.out.println("ÇÕ°è: "+ sum);
-		System.out.format("Æò±Õ: %.2f", average);
+		System.out.println("í•©ê³„: "+ sum);
+		System.out.format("í‰ê· : %.2f", average);
 	}
 	
-	//2Â÷¿ø ¹è¿­ ¼±¾ğ ¿¹½Ã
+	//2ì°¨ì› ë°°ì—´ ì„ ì–¸ ì˜ˆì‹œ
 /*	public static void example03() {
 		int[][] myArr = new int[2][4];
 		myArr[0][0] = 2;
@@ -67,34 +70,34 @@ public class Week03Examples {
 		for (int i = 0; i < 4; i++) {
 			sum1 += myArr[0][i];
 		}
-		System.out.println("Ã¹ ¹øÂ° ÇàÀÇ ÇÕ°è: " + sum1);
+		System.out.println("ì²« ë²ˆì§¸ í–‰ì˜ í•©ê³„: " + sum1);
 		for (int i = 0; i < 4; i++) {
 			sum2 += myArr[1][i];
 		}
-		System.out.println("µÎ ¹øÂ° ÇàÀÇ ÇÕ°è: " + sum2);
+		System.out.println("ë‘ ë²ˆì§¸ í–‰ì˜ í•©ê³„: " + sum2);
 	}*/
 	
-	//(¿¹Á¦ 6-3) 2Â÷¿ø ¹è¿­À» ÀÌ¿ëÇÏ¿© °ú¸ñ Á¡¼öÀÇ Æò±Õ ±¸ÇÏ±â
+	//(ì˜ˆì œ 6-3) 2ì°¨ì› ë°°ì—´ì„ ì´ìš©í•˜ì—¬ ê³¼ëª© ì ìˆ˜ì˜ í‰ê·  êµ¬í•˜ê¸°
 	public static void array03() {
 		double[][] marks = new double[2][3];
 		Scanner s = new Scanner(System.in);
 		for (int i = 0; i < 2; i++) {
-			System.out.println("ÇĞ»ı¹øÈ£" + (i + 1));
-			System.out.print("±¹¾îÁ¡¼ö : ");
+			System.out.println("í•™ìƒë²ˆí˜¸" + (i + 1));
+			System.out.print("êµ­ì–´ì ìˆ˜ : ");
 			marks[i][0] = s.nextDouble();
-			System.out.print("¼öÇĞÁ¡¼ö : ");
+			System.out.print("ìˆ˜í•™ì ìˆ˜ : ");
 			marks[i][1] = s.nextDouble();
 			marks[i][2] = (marks[i][0] + marks[i][1])/2;
 		}
 		for (int i = 0; i < 2; i++) {
-			System.out.println("ÇĞ»ı¹øÈ£" + (i + 1));
-			System.out.print("±¹¾î" + ":" + marks[i][0] + " ");
-			System.out.print("¼öÇĞ" + ":" + marks[i][1] + " ");
-			System.out.println("Æò±Õ" + ":" + marks[i][2] + " ");
+			System.out.println("í•™ìƒë²ˆí˜¸" + (i + 1));
+			System.out.print("êµ­ì–´" + ":" + marks[i][0] + " ");
+			System.out.print("ìˆ˜í•™" + ":" + marks[i][1] + " ");
+			System.out.println("í‰ê· " + ":" + marks[i][2] + " ");
 		}
 	}
 	
-	//2Â÷¿ø ¹è¿­ ÃÊ±âÈ­ ¿¹½Ã
+	//2ì°¨ì› ë°°ì—´ ì´ˆê¸°í™” ì˜ˆì‹œ
 /*	public static void exmaple04() {
 		int myArr[][] = { {1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15} };
 		for (int i = 0; i < 3; i++) {
@@ -103,11 +106,11 @@ public class Week03Examples {
 			}
 			System.out.println();
 		}
-		System.out.println("myArr[0][1] °ª: " + myArr[0][1]);
+		System.out.println("myArr[0][1] ê°’: " + myArr[0][1]);
 	}
 	*/
 	
-	//(¿¹Á¦ 6-4) 2Â÷¿ø ¹è¿­À» ÀÌ¿ëÇÏ¿© µÎ Çà·ÄÀÇ ÇÕ ±¸ÇÏ±â
+	//(ì˜ˆì œ 6-4) 2ì°¨ì› ë°°ì—´ì„ ì´ìš©í•˜ì—¬ ë‘ í–‰ë ¬ì˜ í•© êµ¬í•˜ê¸°
 	public static void array04() {
 		int rows = 2, columns = 3;
 		int[][] firstMatrix = { {2, 3, 4}, {3, 2, 1} };
@@ -118,7 +121,7 @@ public class Week03Examples {
 				sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
 			}
 		}
-		System.out.println("µÎ Çà·ÄÀÇ ÇÕ: ");
+		System.out.println("ë‘ í–‰ë ¬ì˜ í•©: ");
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
 				System.out.print(sum[i][j] + " ");
@@ -127,8 +130,8 @@ public class Week03Examples {
 		System.out.println();
 	}
 	
-	//¹®ÀÚ¿­ - String Å¬·¡½ºÀÇ ¸Ş¼­µå
-	//¹®ÀÚ¿­ ¸Ş¼­µå »ç¿ë ¿¹½Ã
+	//ë¬¸ìì—´ - String í´ë˜ìŠ¤ì˜ ê°ì²´
+	//ë¬¸ìì—´ ì„ ì–¸ ì˜ˆì‹œ
 /*	public static void example06() {
 		String s = " Java Programming ";
 		System.out.println("s.length() : " + s.length());
@@ -138,13 +141,13 @@ public class Week03Examples {
 		System.out.println("s.indexOf('P') : " + s.indexOf("P")); 
 		System.out.println("s.toLowerCase() : " +	s.toLowerCase());
 		System.out.println("s.toUpperCase() : " + s.toUpperCase());
-		//¾Æ·¡·Î Ãß°¡ÇÔ
+		//ì¶”ê°€
 		System.out.println("s.trim : " + s.trim());
 		System.out.println("s.concat : " + s.concat("!"));
 		System.out.println("s.replace : " + s.replace(' ', '_'));
 	}*/
 
-	//(¿¹Á¦ 6-6) String Å¬·¡½º ¸Ş¼­µå ÀÌ¿ëÇÏ±â
+	//(ì˜ˆì œ 6-6) String í´ë˜ìŠ¤ ë©”ì„œë“œ ì´ìš©í•˜ê¸°
 	public static void array06() {
 		String s = " Java Programming ";
 		String s1 = "Java";
@@ -156,7 +159,7 @@ public class Week03Examples {
 		System.out.println("s3.equals(s4) " + s3.equals(s4));
 	}
 
-	//¹®ÀÚ¿­ ¸Ş¼­µå ¿¬»ê ¿¹½Ã
+	//ë¬¸ìì—´ ë©”ì„œë“œ ì—°ì‚° ì˜ˆì‹œ
 /*	public static void example07() {
 		String s1 = "Java";
 		String s2 = "Java";
@@ -176,25 +179,25 @@ public class Week03Examples {
 		String s3 = s1;
 
 		if (s1 == s2)
-			System.out.println("s1°ú s2´Â °°´Ù");
+			System.out.println("s1ê³¼ s2ëŠ” ê°™ë‹¤");
 		else
-			System.out.println("s1°ú s2´Â °°Áö ¾Ê´Ù");
+			System.out.println("s1ê³¼ s2ëŠ” ê°™ì§€ ì•Šë‹¤");
 
 		if (s1 == s3)
-			System.out.println("s1°ú s3Àº °°´Ù");
+			System.out.println("s1ê³¼ s3ì€ ê°™ë‹¤");
 		else
-			System.out.println("s1°ú s3Àº °°Áö ¾Ê´Ù");
+			System.out.println("s1ê³¼ s3ì€ ê°™ì§€ ì•Šë‹¤");
 
 		if (s1.equals(s2))
-			System.out.println("s1°ú s2ÀÇ °ªÀº °°´Ù");
+			System.out.println("s1ê³¼ s2ì˜ ê°’ì€ ê°™ë‹¤");
 		else
-			System.out.println("s1°ú s2ÀÇ °ªÀº °°Áö ¾Ê´Ù");
+			System.out.println("s1ê³¼ s2ì˜ ê°’ì€ ê°™ì§€ ì•Šë‹¤");
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//array01();
 		//example06();
-		array07(); //s1!=s2, s1==s3, s1¿Í s2ÀÇ °ªÀº °°´Ù.
+		array07(); //s1!=s2, s1==s3, s1ì™€ s2ì˜ ê°’ì€ ê°™ë‹¤
 	}
 }
