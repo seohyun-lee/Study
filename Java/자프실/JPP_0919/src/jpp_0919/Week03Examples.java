@@ -95,6 +95,7 @@ public class Week03Examples {
 			System.out.print("수학" + ":" + marks[i][1] + " ");
 			System.out.println("평균" + ":" + marks[i][2] + " ");
 		}
+		s.close();
 	}
 	
 	//2차원 배열 초기화 예시
