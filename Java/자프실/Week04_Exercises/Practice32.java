@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Practice32 {
 
@@ -20,11 +21,12 @@ public class Practice32 {
 	}
 	
 	public static int[] getData(int num) {
-		int[] arr = new int[num];
+		int[] rslt = new int[num];
+		Random r = new Random();
 		for (int i = 0; i < num; i++) {
-			arr[i] = (int)(Math.random() * 100); //0~99
+			rslt[i] = r.nextInt(100); //0~99
 		}
-		return arr;
+		return rslt;
 	}
 	
 	public static void main(String[] args) {
