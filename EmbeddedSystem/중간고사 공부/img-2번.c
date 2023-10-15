@@ -33,7 +33,7 @@ void main(void)
             }
         }
         if (b1_mode == 0) {
-            P2->OUT |= 1<<0;
+            P1->OUT |= 1<<0;
         } else {
             P1->OUT |= 1<<0;
             for(i=0; i<100000; i++);

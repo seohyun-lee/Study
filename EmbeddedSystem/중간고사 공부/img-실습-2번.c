@@ -13,14 +13,13 @@ void main(void)
 {
     int i;
     int time = 100000;
-    int s1but_bs = 0;
-    int s2but_bs = 0;
+    int s1but_bs = BS_INIT;
+    int s2but_bs = BS_INIT;
     
     P1->DIR &= ~(1<<1|1<<4);
     P2->DIR |= 1<<0|1<<1|1<<2;
     P1->REN = 1<<1|1<<4;
     P1->OUT = 1<<1|1<<4;
-    P2->OUT = 2; //안 해도 상관없지만..
     
     while(1)
     {
@@ -28,7 +27,7 @@ void main(void)
             s1but_bs = BS_DOWN;
         } else {
             if (s1but_bs == BS_DOWN) {
-                if(time < 100000*8) time*=2;
+                if (time < 800000) time*=2;
                 s1but_bs=BS_UP;
             }
         }
@@ -36,14 +35,13 @@ void main(void)
             s2but_bs = BS_DOWN;
         } else {
             if (s2but_bs == BS_DOWN) {
-                if(time > 100000/8) time/=2;
-                s1but_bs=BS_UP;
+                if (time > 12500) time/=2;
+                s2but_bs=BS_UP;
             }
         }
         if (time == 100000) P2->OUT = 1<<1;
         else if (time < 100000) P2->OUT = 1<<0;
         else P2->OUT = 1<<2;
-        //ㄴ변수를 따로 만들까 하다가 그냥 안 만듬
         for(i=0; i<time; i++);
         P2->OUT = 0;
         for(i=0; i<time; i++);
