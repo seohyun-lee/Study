@@ -26,5 +26,4 @@ void main(void)
 	        j = 10000;
 	}
 
-	return 0;
 }

@@ -14,7 +14,7 @@ void main(void)
     int s2but_bs = BS_INIT;
     int b1_mode = 1; //깜빡인단뜻
     int b2_pos = 1;
-    int i;
+    int i=0;
 
     P1->DIR |= 1<<0;
     P1->DIR &= ~(1<<1|1<<4); //1, 4번 PIN 입력모드
@@ -22,25 +22,27 @@ void main(void)
     P1->REN = 1<<1|1<<4;
     P1->OUT = 1<<0|1<<1|1<<4; //1로 해야 PULL-UP
     P2->OUT = 1<<0; //빨간색으로 시작
-    
+
     while(1) {
+        i= (i+1)%200000;
         if (S1BUT){
             s1but_bs=BS_DOWN;
         } else {
             if(s1but_bs == BS_DOWN) {
                 s1but_bs=BS_UP;
                 b1_mode = 1 - b1_mode;
+                i=0;
             }
         }
         if (b1_mode == 0) {
             P1->OUT |= 1<<0;
         } else {
-            P1->OUT |= 1<<0;
-            for(i=0; i<100000; i++);
-            P1->OUT &= ~(1<<0);
-            for(i=0; i<100000; i++);
+            if(i<100000)
+                P1->OUT |= 1<<0;
+            else
+                P1->OUT &= ~(1<<0);
         }
-        
+
         if (S2BUT){
             s2but_bs=BS_DOWN;
         } else {
