@@ -31,7 +31,7 @@ public class Week02Examples2 {
 /*	public void example02() {
 		int num = 120;
 
-		if ( num < 50) {
+		if (num < 50) {
 			System.out.println("숫자가 50보다 작습니다.");
 		}
 		else {
