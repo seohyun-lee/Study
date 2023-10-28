@@ -7,10 +7,10 @@ public class Week02 {
 		final double PI = 3.14;
 		System.out.println("반지름 3인 원의 넓이는: " + 3*3*PI);
 		
-		int a = 10; short s = 2; byte b = 6; long l = 123456789L;
+		int a = 10; short s = 2; byte b = 6; long l = 12345678999999L; //정수를 적으면 int형이라 int범위 넘는 수는 L 붙이기 필수
 		System.out.println(a + " " + s + " " + b + " " + l);
 		
-		float f = 65.20f; double d= 8.765d;
+		float f = 65.20f; double d= 8.765; //실수를 적으면 double형임. float는 뒤에 f붙여야함
 		System.out.println("float: " + f + "  double: " + d);
 		
 		char v1='A'; char v2='B';
@@ -26,8 +26,8 @@ public class Week02 {
 		boolean bt = true;
 		boolean bf = false;
 		System.out.println(bt|bf);
-		System.out.println(bt&bf);
-		*/
+		System.out.println(bt&bf);*/
+		
 		
 		/*//증감 연산자
 		int x=10;		
@@ -130,7 +130,7 @@ public class Week02 {
 		while(num>0) {
 			num=s.nextInt();
 			System.out.println(num);
-			//0 이후 종료
+			//0 이하 수 출력 후 종료
 		}*/
 		
 		/*
@@ -157,7 +157,7 @@ public class Week02 {
 			for(int j=0; j<i; j++) {
 				System.out.print(" ");
 			}
-			for(int j=0; j<(2*len)-1-(i*2); j++) { //최대 가로 별 개수가 2*len-1임, i*2씩 감소함
+			for(int j=0; j<2*(len-i)-1; j++) { //최대 가로 별 개수가 2*len-1이다. 각 줄에 2씩 감소. 그러므로 j<2(len-i)-1
 				System.out.print("*");
 			}
 			System.out.println();
