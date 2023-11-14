@@ -31,7 +31,7 @@ void main(void)
             SysTick_Wait(time);
             time -= 1500000;
 	    }
-        for(i = 0; i < 9; i++){
+        for(i = 0; i < 10; i++){
             P1->OUT = 1;
             SysTick_Wait(time);
             P1->OUT = 0;
