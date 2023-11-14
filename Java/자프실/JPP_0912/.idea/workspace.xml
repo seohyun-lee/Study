@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59bb3a3b-b4a9-473b-afd4-20020ecdc4fd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Project01_BookMarket/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project01_BookMarket/src/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project01_BookMarket/src/Welcome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../EmbeddedSystem/231102/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../EmbeddedSystem/231102/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,15 +17,15 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/SAMSUNG/Documents/GitHub/Study/Java/자프실/JPP_0912",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SAMSUNG/Documents/GitHub/Study/Java/자프실/JPP_0912&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,6 +35,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695103474047</updated>
       <workItem from="1695103474959" duration="16000" />
+      <workItem from="1699623278273" duration="2000" />
     </task>
     <servers />
   </component>
