@@ -4,9 +4,6 @@
 #include "LcdDriver/Crystalfontz128x128_ST7735.h"
 #include "LcdDriver/msp432p4111_classic.h"
 
-/* Graphic library context */
-Graphics_Context g_sContext;
-
 /*
  * Main function
  */
