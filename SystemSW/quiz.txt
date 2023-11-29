@@ -1,15 +1,23 @@
 C=0
+D=0
+E=0
 for A in `cat $1`
 do
         let C=1-$C
         if [ $C -eq 1 ]
         then
                 echo $A
+                let D=$D+1
                 read -e B
         else
                 if [ $A = $B ]
-                then    echo "정답(O)"
-                else    echo "땡(O)"
+                then
+                        echo "정답(O)"
+                        let E=$E+1
+                else
+                        echo "땡(O)"
+                        echo $A
                 fi
         fi
 done
+echo "당신은 총 $D문제 중 $E문제를 맞추셨습니다"
