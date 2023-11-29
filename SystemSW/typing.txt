@@ -1,0 +1,15 @@
+L=0
+C=0
+for i in `cat $1`
+do
+        echo $i
+        let L=$L+1
+        read -e A
+        if [ $i = $A ]
+        then
+                echo "정답(O)"
+                let C=$C+1
+        else    echo "땡(X)"
+        fi
+done
+echo "당신은 총 $L문제 중 $C문제를 맞추셨습니다."

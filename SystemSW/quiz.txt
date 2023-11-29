@@ -1,0 +1,15 @@
+C=0
+for A in `cat $1`
+do
+        let C=1-$C
+        if [ $C -eq 1 ]
+        then
+                echo $A
+                read -e B
+        else
+                if [ $A = $B ]
+                then    echo "정답(O)"
+                else    echo "땡(O)"
+                fi
+        fi
+done

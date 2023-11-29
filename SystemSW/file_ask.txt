@@ -1,0 +1,54 @@
+if [ $2 = "exist" ]
+then
+        if [ -e $1 ]
+        then
+                echo "Yes"
+        else
+                echo "No"
+        fi
+fi
+if [ $2 = "directory" ]
+then
+        if [ -d $1 ]
+        then
+                echo "Yes"
+        else
+                echo "No"
+        fi
+fi
+if [ $2 = "regular" ]
+then
+        if [ -f $1 ]
+        then
+                echo "Yes"
+        else
+                echo "No"
+        fi
+fi
+if [ $2 = "readable" ]
+then
+        if [ -r $1 ]
+        then
+                echo "Yes"
+        else
+                echo "No"
+        fi
+fi
+if [ $2 = "writable" ]
+then
+        if [ -w $1 ]
+        then
+                echo "Yes"
+        else
+                echo "No"
+        fi
+fi
+if [ $2 = "executable" ]
+then
+        if [ -x $1 ]
+        then
+                echo "Yes"
+        else
+                echo "No"
+        fi
+fi
