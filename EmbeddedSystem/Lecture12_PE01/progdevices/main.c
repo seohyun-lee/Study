@@ -64,11 +64,11 @@ void main(void)
         if (ADC14_getResult(ADC_MEM0) < 2200)
             resultsBuffer[0] = 0;
         else if (ADC14_getResult(ADC_MEM0) > 14200)
-            resultsBuffer[0] = 121;
+            resultsBuffer[0] = 122;
         else resultsBuffer[0] = (ADC14_getResult(ADC_MEM0) - 2200) / 100;
 
         if (ADC14_getResult(ADC_MEM1) < 2200)
-            resultsBuffer[1] = 119;
+            resultsBuffer[1] = 120;
         else if (ADC14_getResult(ADC_MEM1) > 14200)
             resultsBuffer[1] = 0;
         else resultsBuffer[1] = (14200 - ADC14_getResult(ADC_MEM1)) / 100;
